@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "MavenPro";
+  src: url("../fonts/MavenPro-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Gilda";
+  src: url("../fonts/GildaDisplay-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+html {
+  font-family: Times, serif;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  height: 700px;
+  margin-bottom: 300px;
+  background-color: #333;
+}
+
+.logo {
+  width: 70px;
+  padding-left: 20px;
+}
+
+.logo p {
+  font-family: "MavenPro";
+  color: #949494;
+  font-size: 1.76rem;
+}
+
+.logo p:nth-of-type(2) {
+  padding-left: 4px;
+}
+
+.headerGif {
+  margin-bottom: 5%;
+  height: 230px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: blue;
+  background-image: linear-gradient(
+    to top right,
+    #a5068eff 0%,
+    #a5068ed1 27%,
+    #070ba670 52%,
+    #00cdffbf 77%,
+    #00f7ffeb 100%
+  );
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "MavinPro";
+  color: white;
+  text-align: center;
+}
+
+.headerGif:hover {
+  background-image: linear-gradient(
+    to bottom left,
+    #a5068eff 0%,
+    #a5068ed1 27%,
+    #070ba670 52%,
+    #00cdffbf 77%,
+    #00f7ffeb 100%
+  );
+}
+
+.headerGif h2 {
+  font-family: "Gilda";
+  font-size: 4.8rem;
+  text-align: center;
+  margin: 2px 50px 0 50px;
+  line-height: 90px;
+  font-weight: 100;
+}
+
+.headerGif p {
+  padding: 0 30px 20px 30px;
+  font-size: 1.6rem;
+}
+
+nav {
+  padding-right: 10px;
+  width: 98%;
+  text-align: right;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-family: "MavenPro";
+  font-size: 1.6rem;
+  color: #8c8c8c;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+
+.intro {
+  width: 720px;
+  padding-left: 50px;
+  margin-bottom: 200px;
+}
+.intro img {
+  height: 100px;
+  width: 100%;
+  opacity: 0.03;
+}
+
+.intro h3 {
+  margin-top: -20px;
+  margin-bottom: 60px;
+  font-size: 5.6rem;
+}
+
+.intro p {
+  padding-right: 20px;
+  font-family: "MavenPro";
+  font-size: 1.6rem;
+}
+
+.weDid {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weDid article {
+  margin-bottom: 80px;
+}
+
+.weDid img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.weDid article h4 {
+  margin-bottom: 10px;
+  font-size: 3.2rem;
+}
+
+.weDid article p {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}

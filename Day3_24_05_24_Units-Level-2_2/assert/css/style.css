@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+header section {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 10%;
+  background: url("../img/scott-lord-o9PTdUxitkY-unsplash.jpg") no-repeat center;
+}
+
+header section article {
+  width: 70vw;
+  padding: 10px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(159, 155, 155, 0.6);
+}
+
+header section article h1,
+header section article h2 {
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+}

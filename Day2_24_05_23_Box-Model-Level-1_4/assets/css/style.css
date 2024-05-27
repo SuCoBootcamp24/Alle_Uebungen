@@ -1,0 +1,41 @@
+div {
+  height: 150px;
+  width: 150px;
+  margin: 50px;
+  box-shadow: 0px 0px 0px 25px #ed6a5a;
+  outline-color: #546a7b;
+  outline-style: solid;
+  outline-width: 8px;
+  border: 17px solid #f4f1bb;
+  background-color: #9bc1bc;
+}
+
+ul {
+  list-style-type: none;
+  position: relative;
+  padding-left: 25px;
+}
+
+li {
+  position: relative;
+  padding-left: 20px;
+}
+
+li::before {
+  content: "\25b6";
+  position: absolute;
+  left: 0;
+  color: #9bc1bc;
+}
+
+li:nth-child(2)::before {
+  color: #f4f1bb;
+}
+
+li:nth-child(3)::before {
+  color: #546a7b;
+}
+
+li:nth-child(4)::before {
+  color: #ed6a5a;
+}
