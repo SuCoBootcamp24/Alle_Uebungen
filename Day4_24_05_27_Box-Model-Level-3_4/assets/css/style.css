@@ -22,3 +22,61 @@
 html {
   font-family: Lato, Helvetica, Arial, sans-serif;
 }
+
+header {
+  display: flex;
+  height: 200px;
+  background: #36b5b0;
+}
+
+header h1 {
+  height: 80px;
+  width: 320px;
+  padding: 10px;
+
+  font-family: "LeckerliOne";
+  font-size: 6.4rem;
+  font-weight: 100;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  rotate: -10deg;
+
+  transition: transform 2s;
+}
+
+header h1:hover {
+  height: 80px;
+  width: 320px;
+  transform: rotate(20deg);
+}
+
+main {
+  border: 3px solid red;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .image {
+  margin-top: 20px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .image img {
+  display: flex;
+  height: 95%;
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px black;
+  transition: width 0.5s, height 0.5s;
+}
+
+main .image img:hover {
+  height: 100%;
+  width: 100%;
+
+  transition: width 0.5s, height 0.5s;
+}
