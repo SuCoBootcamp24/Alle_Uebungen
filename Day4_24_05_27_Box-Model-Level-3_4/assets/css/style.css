@@ -52,31 +52,140 @@ header h1:hover {
 }
 
 main {
-  border: 3px solid red;
+  margin-top: 50px;
+}
+
+.image,
+.content {
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-main .image {
-  margin-top: 20px;
-  width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main .image img {
+.image {
   display: flex;
-  height: 95%;
-  width: 95%;
-  margin: 10px auto;
+  height: 450px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 97%;
+  width: 97%;
+  border: 10px solid white;
+  box-sizing: border-box;
   border-radius: 20px;
+
   box-shadow: 2px 2px 8px black;
   transition: width 0.5s, height 0.5s;
 }
 
-main .image img:hover {
+.image img:hover {
   height: 100%;
   width: 100%;
 
   transition: width 0.5s, height 0.5s;
+}
+
+.content {
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+.content h2 {
+  font-size: 2.4rem;
+}
+
+.content p {
+  margin: 15px 20px 15px 0;
+  font-size: 1.6rem;
+}
+
+.content a {
+  margin-top: 15px;
+  font-size: 1.6rem;
+  color: #9dd8c8;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: rgb(242, 177, 201);
+}
+
+.inputBoxBorder {
+  display: flex;
+  justify-content: center;
+  border: 3px solid rgb(46, 146, 183);
+  width: 95%;
+  margin: 15px auto 0 auto;
+  padding: 20px;
+}
+
+.inputBox {
+  height: 200px;
+  width: 100%;
+
+  background: #fcf5b0;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.keyfield {
+  display: flex;
+
+  height: 70%;
+  width: 90%;
+  margin: 40px auto;
+
+  border-bottom: 5px solid #ff0000;
+}
+
+.keyfield h3 {
+  height: 65px;
+  width: 45px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 2px;
+
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.keyfield article {
+  display: flex;
+  width: 95%;
+}
+
+.keyfield article label,
+.keyfield article input {
+  font-family: "CourierPrime";
+  font-size: 3rem;
+}
+
+.keyfield article input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 20px 0 80px 0;
+
+  font-family: "CourierPrime";
+  font-size: 3rem;
+}
+
+footer {
+  margin: 80px 0 0 0;
+  background: #9dd8c8;
+  text-align: center;
+
+  padding: 50px 0 10px 0;
+}
+
+footer p,
+footer a {
+  font-size: 1.6rem;
+}
+
+footer p {
+  margin-bottom: 20px;
 }
