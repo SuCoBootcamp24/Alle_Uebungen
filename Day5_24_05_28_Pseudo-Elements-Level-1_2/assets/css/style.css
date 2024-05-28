@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0 0 0 3px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+h3::first-letter {
+  color: darkorange;
+  font-size: 3.6rem;
+}
+
+ul {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+ul li {
+  margin-left: 45px;
+}
+
+ul li:nth-of-type(1)::first-letter {
+  color: #00bfff;
+  text-decoration: overline;
+  font-size: 2.2rem;
+}
+
+ul li:nth-of-type(2)::first-letter {
+  color: #c71585;
+  text-decoration: underline;
+  font-size: 2.2rem;
+}
+
+ul li:nth-of-type(3) {
+  text-decoration: line-through;
+}
+
+ul li:nth-of-type(3)::first-letter {
+  color: #32cd32;
+  text-decoration: line-through;
+  font-size: 2.2rem;
+}
+
+/*****/
+
+section p {
+  margin-bottom: 10px;
+}
+
+section p:nth-of-type(1) {
+  display: block;
+  font-size: 1rem;
+  color: darkorange;
+}
+
+section p:nth-of-type(1)::first-line {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/******/
+
+section p:nth-of-type(2) {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+section p:nth-of-type(2)::first-letter {
+  color: #c71585;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(2)::first-line {
+  color: #2e8b57;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(3) {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+section p:nth-of-type(3)::first-letter {
+  color: #c71585;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(3)::first-line {
+  color: #2e8b57;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(4) {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+section p:nth-of-type(4)::first-letter {
+  color: #c71585;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(4)::first-line {
+  color: #2e8b57;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(5) {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+section p:nth-of-type(5)::first-letter {
+  color: #c71585;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(5)::first-line {
+  color: #2e8b57;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(6) {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+section p:nth-of-type(6)::first-letter {
+  color: #c71585;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+section p:nth-of-type(6)::first-line {
+  color: #2e8b57;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* ---------------------------- */
+h1 {
+  color: #a020f0;
+  color: #00bfff;
+  color: #32cd32;
+  color: #c71585;
+  color: #00ced1;
+  color: #483d8b;
+  color: #2e8b57;
+
+  color: darkorange;
+}
