@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background: linen;
+}
+
+section h1 {
+  background: lightblue;
+}
+
+article {
+  background-image: url("../img/kellen-riggin-pRTr1YhZ3Is-unsplash.jpg");
+  background-size: 10%;
+}
