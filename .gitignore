@@ -7,7 +7,7 @@
 \pard\pardeftab720\partightenfactor0
 
 \f0\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec3 ### macOS ###\
+### macOS ###\
 # General\
 .DS_Store\
 .AppleDouble\
@@ -39,4 +39,7 @@ Temporary Items\
 ### macOS Patch ###\
 # iCloud generated files\
 *.icloud\
+\
+### Sonstiges ###\
 }
+/.Vorlage
