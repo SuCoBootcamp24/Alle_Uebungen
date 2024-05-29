@@ -2,10 +2,6 @@
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf");
 }
-@font-face {
-  font-family: "RobotoThin";
-  src: url("../fonts/Roboto-Thin.ttf");
-}
 
 * {
   margin: 0;
