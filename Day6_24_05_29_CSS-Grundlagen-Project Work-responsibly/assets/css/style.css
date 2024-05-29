@@ -2,6 +2,10 @@
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "RobotoThin";
+  src: url("../fonts/Roboto-Thin.ttf");
+}
 
 * {
   margin: 0;
@@ -24,13 +28,145 @@ img {
 }
 
 .wrapper {
-  margin-left: 10%;
+  padding: 0 6%;
 }
 
+/* heaader */
+
 header {
+  margin-top: 20px;
+}
+header nav {
+  margin-bottom: 140px;
 }
 
 header nav a {
+  padding: 2px 5px 2px 0;
   font-size: 1.4rem;
   color: #659d89;
+}
+
+header section {
+  max-width: 650px;
+}
+
+header section h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  color: #659d89;
+}
+
+header section p {
+  font-size: 5rem;
+}
+
+header article {
+  width: 30px;
+  margin: 0 0 80px 95%;
+  text-align: center;
+}
+
+header article a {
+  display: inline-block;
+  padding: 2px 2px;
+}
+
+header div {
+  margin-bottom: 130px;
+}
+
+header div a {
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+/* Main Smileys */
+
+.smileyFrame h3 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+
+.smileyFrame p {
+  font-size: 1.6rem;
+  font-size: 100;
+}
+
+.smileyFrame section {
+  width: 100%;
+  padding: 4%;
+  margin-bottom: 130px;
+}
+
+.smileyFrame section img {
+  width: 28%;
+  margin: 2%;
+}
+
+/* main context*/
+
+.contentFrame h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.contentFrame section {
+  width: 100%;
+  padding: 6%;
+}
+
+.contentFrame section article {
+  width: 70%;
+  max-width: 650px;
+}
+
+.contentFrame section article div {
+  width: 90%;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.contentFrame section article div p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #666666;
+}
+
+.contentFrame section article div h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 15px 0;
+}
+
+.c-left {
+  margin: 0 30% 130px 0;
+}
+
+.c-right {
+  margin: 0 0 130px 30%;
+}
+
+footer {
+  width: 100%;
+  padding-top: 80px;
+  border-top: 1px dotted #ccc;
+  color: #666;
+  text-align: center;
+}
+
+footer h3 {
+  margin-bottom: 80px;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+footer p {
+  margin-bottom: 35px;
+}
+
+footer h3::before {
+  content: "⬆️";
+  margin-right: 3px;
 }
