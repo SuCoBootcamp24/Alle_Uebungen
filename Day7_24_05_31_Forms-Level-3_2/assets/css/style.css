@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+main {
+  width: 30vw;
+  margin: 3% auto;
+  background: rgb(43, 54, 48);
+}
+
+main article {
+  display: flex;
+  width: 100%;
+  padding: 3%;
+}
+
+main article a {
+  display: inline-block;
+
+  height: 50px;
+  width: 130px;
+  padding-top: 15px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+main article a:nth-of-type(1) {
+  margin-right: 10px;
+}
+
+.activeBtn {
+  background: rgb(10, 192, 134);
+}
+
+main form {
+  padding: 10% 2%;
+}
+
+main form h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main form input {
+  height: 30px;
+  width: 100%;
+  background: rgb(43, 54, 48);
+  margin-bottom: 10px;
+}
+
+main form div {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+main form div input {
+  width: 50%;
+}
+
+main form a {
+  display: inline-block;
+  width: 100%;
+  text-align: end;
+  color: green;
+}
+
+.submitBtn {
+  height: 50px;
+  font-size: 1.6rem;
+  background: rgb(10, 192, 134);
+  color: white;
+}
