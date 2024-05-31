@@ -14,66 +14,51 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+  width: 30vw;
+  margin: 5% auto;
+
+  background: rgba(228, 228, 228, 0.603);
+}
+
+main h1 {
+  width: 100%;
+  background: rgb(19, 194, 153);
+
+  padding: 4% 0;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
 form {
-  width: 50vw;
+  width: 90%;
   margin: 5% auto;
 }
 
-label {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 900;
-  margin-bottom: 5px;
-}
-
-.imp::after {
-  margin-left: 5px;
-  content: "*";
-  color: red;
-}
-
-input {
+form input {
   height: 25px;
-  width: 100%;
+  width: 95%;
   margin-bottom: 10px;
   padding-left: 10px;
-  border: 1px solid rgb(208, 201, 161);
-  font-size: 1.2rem;
-}
-
-form div {
-  height: 25px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-form div input {
-  width: 49%;
-}
-
-form div input:nth-of-type(1) {
-  margin-right: 1%;
-}
-
-form select {
-  margin-bottom: 10px;
-  padding-left: 10px;
-  border: 1px solid rgb(208, 201, 161);
-  height: 25px;
-  width: 100%;
-  font-size: 1.2rem;
+  border: 1px solid gray;
+  font-size: 1rem;
 }
 
 form textarea {
   height: 100px;
-  width: 100%;
+  width: 95%;
   margin-bottom: 10px;
-  border: 1px solid rgb(208, 201, 161);
+  padding: 5px 0 0 10px;
+  border: 1px solid gray;
+
+  font-size: 1rem;
 }
 
 .submitBtn {
   height: 35px;
-  background: rgb(31, 163, 186);
+
+  background: rgb(19, 194, 153);
   color: white;
   font-size: 1.3rem;
 }

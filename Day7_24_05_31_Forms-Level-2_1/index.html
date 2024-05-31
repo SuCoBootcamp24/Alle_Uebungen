@@ -7,30 +7,33 @@
     <title>Forms</title>
   </head>
   <body>
-    <h1>Contact Us</h1>
+    <main>
+      <h1>Contact Us</h1>
 
-    <form action="">
-      <input
-        type="text"
-        name="name"
-        id="name"
-        required
-        placeholder="Your Name"
-      />
+      <form action="">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          placeholder="Your Name"
+        />
 
-      <input type="email" name="email" id="email" required />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+        />
 
-      <label for="thema">Thema</label>
-      <select name="thema" id="thema">
-        <option value="general">General</option>
-        <option value="advertise">Advertise</option>
-        <option value="partnership">Partnership</option>
-        <option value="message">Nachricht</option>
-      </select>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Type your Message"
+        ></textarea>
 
-      <label class="imp" for="message">Nachricht</label>
-      <textarea name="" id=""></textarea>
-      <input class="submitBtn" type="submit" value="Submit" />
-    </form>
+        <input class="submitBtn" type="submit" value="Sent" />
+      </form>
+    </main>
   </body>
 </html>
