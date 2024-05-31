@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main form fieldset legend {
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+
+main form fieldset label {
+  font-size: 1.3rem;
+}
+
+main form fieldset div {
+  width: 350px;
+  padding: 5px;
+}

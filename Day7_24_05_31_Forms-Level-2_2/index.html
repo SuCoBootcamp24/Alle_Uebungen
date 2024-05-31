@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Authentication</legend>
+          <div>
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Email"
+            />
+
+            <label for="email">Password :</label>
+            <input
+              type="password"
+              name=""
+              id=""
+              required
+              placeholder="Password"
+              pattern=".{8,}"
+            />
+
+            <input type="submit" value="Sent" />
+            <input type="reset" />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
