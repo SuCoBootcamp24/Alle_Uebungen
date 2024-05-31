@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  width: 50vw;
+  margin: 5% auto;
+}
+
+label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.imp::after {
+  margin-left: 5px;
+  content: "*";
+  color: red;
+}
+
+input {
+  height: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border: 1px solid rgb(208, 201, 161);
+  font-size: 1.2rem;
+}
+
+form div {
+  height: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form div input {
+  width: 49%;
+}
+
+form div input:nth-of-type(1) {
+  margin-right: 1%;
+}
+
+form select {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border: 1px solid rgb(208, 201, 161);
+  height: 25px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+form textarea {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid rgb(208, 201, 161);
+}
+
+.submitBtn {
+  height: 35px;
+  background: rgb(31, 163, 186);
+  color: white;
+  font-size: 1.3rem;
+}
