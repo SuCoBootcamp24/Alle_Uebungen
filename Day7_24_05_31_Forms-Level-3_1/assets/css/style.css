@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  width: 40vw;
+  margin: 2% auto;
+}
+
+main article {
+  width: 100%;
+  padding: 20px 0 15px 20px;
+  background-color: rgb(7, 103, 159);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main article h2,
+main article p {
+  color: white;
+}
+
+main article h2 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+main article p {
+  font-size: 1.3rem;
+}
+
+main form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4% 10%;
+  box-shadow: 0px 0px 5px gray;
+}
+
+main form h3 {
+  font-size: 2.3rem;
+  font-weight: 100;
+  color: rgb(7, 103, 159);
+}
+
+main form div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3% 6%;
+  background: rgba(128, 128, 128, 0.21);
+  border-radius: 5px;
+}
+
+main form input {
+  height: 30px;
+  width: 100%;
+  margin: 3% auto;
+  padding-left: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px gray;
+
+  font-size: 1.2rem;
+}
+
+.sendAndPolicyFrame {
+  display: flex;
+  height: 100px;
+  width: 80%;
+  background: none;
+}
+
+.sub {
+  width: 80px;
+  background: rgb(7, 103, 159);
+}
+
+.policyFrame {
+  display: flex;
+  height: 50px;
+  width: 60%;
+  background: none;
+}
+
+.check {
+  height: 10px;
+  width: 10px;
+  margin: 10px auto auto -3px;
+}
+.policyFrame label {
+  margin-top: 10px;
+}
