@@ -48,6 +48,10 @@ header nav a {
   color: #666;
 }
 
+header nav a:hover {
+  color: black;
+}
+
 header nav ul {
   display: flex;
   width: 40vw;
@@ -105,8 +109,17 @@ main {
   background: #745cf9;
 }
 
+.welcomeBox article a:nth-of-type(1):hover {
+  background: #5a3ff2;
+}
+
 .welcomeBox article a:nth-of-type(2) {
   border: 1px solid white;
+}
+
+.welcomeBox article a:nth-of-type(2):hover {
+  background: white;
+  color: black;
 }
 
 /** --- Main SEO Frendly box -- */
@@ -265,6 +278,11 @@ main {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  transition: transform 1000ms ease-out;
+}
+
+.mainS5 img:hover {
+  transform: rotate(180deg) translate(0px, 0px);
 }
 
 .mainS5 article {
