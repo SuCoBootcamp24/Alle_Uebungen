@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+/** --- Header ---*/
+
+header {
+  display: flex;
+  width: 100vw;
+  padding: 1% 4%;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  font-size: 2.4rem;
+  color: black;
+}
+
+header h2::before {
+  content: url("../img/logo.png");
+  margin-right: 10px;
+}
+
+header nav {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+header nav article a {
+  margin-left: 20px;
+
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+}
+
+/** ---- Main ---- */
+
+main {
+  background: #d9e8e5;
+  padding: 5% 15%;
+  position: relative;
+}
+
+main h3 {
+  position: absolute;
+  font-size: 2.4rem;
+  top: 30px;
+  left: 130px;
+}
+
+main article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2%;
+
+  height: 430px;
+}
+
+main article div {
+  position: relative;
+}
+
+main article div img {
+  height: 200px;
+}
+
+main article div p {
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.8);
+}
