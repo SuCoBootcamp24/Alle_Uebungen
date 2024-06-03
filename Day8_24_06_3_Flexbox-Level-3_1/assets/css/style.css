@@ -278,10 +278,13 @@ main {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+}
+
+.dude {
   transition: transform 1000ms ease-out;
 }
 
-.mainS5 img:hover {
+.dude:hover {
   transform: rotate(180deg) translate(0px, 0px);
 }
 
