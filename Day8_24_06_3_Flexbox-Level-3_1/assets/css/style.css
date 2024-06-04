@@ -517,3 +517,25 @@ footer div {
     padding: 15px 20px;
   }
 }
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  /** --- headder --- */
+
+  header nav input {
+    display: inline-block;
+  }
+
+  .burgericon {
+    display: block;
+  }
+
+  header nav ul {
+    padding-left: 15%;
+    display: none;
+  }
+
+  header nav ul li {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
