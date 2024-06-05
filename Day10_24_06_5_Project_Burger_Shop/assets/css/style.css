@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "KhandB";
+  src: url("../fonts/Khand-Bold.ttf");
+}
+
+@font-face {
+  font-family: "KhandR";
+  src: url("../fonts/Khand-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Bevan";
+  src: url("../fonts/Bevan-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+/** ---- BASIC ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "KhandR", sans-serif;
+  font-size: 10px;
+  background-color: whitesmoke;
+}
+
+a {
+  font-family: "KhandR";
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Bevan";
+  font-size: 11.6rem;
+  line-height: 0.8;
+  color: white;
+}
+
+h2 {
+  font-family: "Bevan";
+  font-size: 3.9rem;
+  line-height: auto;
+  color: white;
+}
+
+h3 {
+  font-family: "Bevan";
+  font-size: 4.6rem;
+  line-height: auto;
+  color: black;
+}
+
+h4 {
+  font-family: "KhandB";
+  font-size: 3.2rem;
+  line-height: auto;
+  color: black;
+}
+
+p {
+  font-family: KhandR;
+  font-size: 2.4rem;
+  line-height: auto;
+  color: black;
+}
+
+.btn {
+  display: inline;
+
+  width: 200px;
+  background: red;
+  padding: 3% 0;
+  border: 2px solid red;
+  border-radius: 10px;
+
+  font-family: "Bevan";
+  font-size: 1.6rem;
+  text-align: center;
+  color: white;
+}
+
+/** --- Header ---*/
+
+header {
+  height: 60vh;
+  background: url("../img/bg1.png") no-repeat;
+  background-size: cover;
+}
+
+header section:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 10vh;
+  padding: 2% 5%;
+  z-index: 5;
+}
+
+header section nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  z-index: 5;
+}
+
+header section nav a {
+  font-family: "Inter";
+  z-index: 5;
+}
+
+/* ? ----------- */
+
+header section:nth-of-type(2) {
+  display: flex;
+}
+
+header section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 65%;
+  height: 33vh;
+  margin-left: 5%;
+  z-index: 5;
+}
+
+header section article > .btn {
+  margin-top: 5%;
+  color: black;
+  background-color: #ffe943;
+  border-radius: 40px;
+  border: none;
+  padding: 15px 0;
+}
+
+header section:nth-of-type(2) > div {
+  position: relative;
+  width: 80%;
+  height: 60vh;
+  margin-left: -25%;
+  margin-top: -10vh;
+  z-index: 4;
+}
+
+header section:nth-of-type(2) div div:nth-of-type(1) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+header section:nth-of-type(2) div div:nth-of-type(1) > img {
+  height: 200%;
+  width: 150%;
+  position: absolute;
+  top: -37%;
+  right: -26%;
+  z-index: 0;
+  filter: saturate(1.5);
+  opacity: 0.6;
+}
+
+header section:nth-of-type(2) div div:nth-of-type(2) {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 120%;
+  width: 100%;
+  z-index: 2;
+}
+
+header section:nth-of-type(2) div div:nth-of-type(2) > img {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  z-index: 2;
+  overflow: visible;
+}
