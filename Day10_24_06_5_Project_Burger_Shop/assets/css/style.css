@@ -70,17 +70,18 @@ p {
   font-family: KhandR;
   font-size: 2.4rem;
   line-height: auto;
-  color: black;
+  color: #121116;
+  text-shadow: 0 4px 4px #00000035;
 }
 
 .btn {
   display: inline;
 
   width: 200px;
-  background: red;
-  padding: 3% 0;
-  border: 2px solid red;
-  border-radius: 10px;
+  background: #6e0c00;
+  padding: 4% 0;
+  border: 2px solid #6e0c00;
+  border-radius: 25px;
 
   font-family: "Bevan";
   font-size: 1.6rem;
@@ -94,6 +95,8 @@ header {
   height: 60vh;
   background: url("../img/bg1.png") no-repeat;
   background-size: cover;
+
+  margin-bottom: 15%;
 }
 
 header section:nth-of-type(1) {
@@ -188,4 +191,119 @@ header section:nth-of-type(2) div div:nth-of-type(2) > img {
   height: 100%;
   z-index: 2;
   overflow: visible;
+}
+
+/** ----- Main Section 1 --- */
+
+.mainS1 {
+  display: flex;
+  justify-content: space-between;
+
+  width: 93%;
+  margin: 0 auto 10% auto;
+}
+
+.mainS1 > a {
+  width: 54%;
+}
+
+.mainS1 a img {
+  width: 100%;
+}
+
+.mainS1 article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.mainS1 article a {
+  width: 100%;
+}
+
+/** ---- Main Section 2 ---- */
+
+.mainS2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 65vh;
+}
+
+.mainS2 article:nth-of-type(1) {
+  width: 80%;
+
+  text-align: center;
+}
+
+.mainS2 article:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.mainS2 article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  height: 55vh;
+  width: 32%;
+
+  overflow: hidden;
+}
+
+.mainS2 article div img {
+  overflow: hidden;
+}
+
+.mainS2 article div .btn {
+  margin: 0 auto;
+}
+
+.mainS2 article div h4 {
+  text-align: center;
+}
+
+.mainS2 article div:nth-of-type(1) img {
+  width: 85%;
+  margin-left: 12%;
+}
+
+.mainS2 article div:nth-of-type(2) img {
+  width: 105%;
+  margin: 9% 0 0 -4%;
+}
+
+.mainS2 article div:nth-of-type(3) img {
+  width: 100%;
+  margin: 10% 0 0 2%;
+}
+
+/** ---- Footer --- */
+
+footer {
+  background: url("../img/bg2.png");
+  width: 100%;
+  padding: 3%;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  width: 70%;
+}
+
+footer section img {
+  height: 6vh;
+  width: 26%;
+}
+
+footer section article {
+  display: flex;
+  flex-direction: column;
 }
