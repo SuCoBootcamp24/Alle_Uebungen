@@ -288,22 +288,49 @@ header section:nth-of-type(2) div div:nth-of-type(2) > img {
 footer {
   background: url("../img/bg2.png");
   width: 100%;
-  padding: 3%;
+  padding: 5% 4%;
 }
 
 footer section {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
-  width: 70%;
+  margin-bottom: 5%;
+  width: 68%;
 }
 
 footer section img {
-  height: 6vh;
-  width: 26%;
+  height: 5vh;
+  width: 28%;
 }
 
 footer section article {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  height: 8vh;
+}
+
+footer section article a {
+  font-size: 1.8rem;
+}
+
+footer article {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+footer article ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 12%;
+}
+
+footer article p {
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: white;
 }
