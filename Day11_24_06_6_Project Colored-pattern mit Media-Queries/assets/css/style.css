@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0 1%;
+  font-size: 20px;
+  text-align: center;
+}
+
+/** ---- Header ----- */
+
+header {
+  margin: 10px 0;
+  height: 6vh;
+  width: 100%;
+  background: rgb(80, 231, 245);
+}
+
+/** --- main --- */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+}
+
+main article {
+  width: 100%;
+}
+
+main > article {
+  height: 6vh;
+  background: rgb(113, 49, 233);
+}
+main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+main div div article {
+  height: 6vh;
+}
+
+.div1 article:nth-of-type(1) {
+  background: rgb(64, 218, 169);
+}
+
+.div1 article:nth-of-type(2) {
+  background: rgb(252, 174, 78);
+}
+
+.div2 article:nth-of-type(1) {
+  background: rgb(246, 114, 197);
+}
+.div2 article:nth-of-type(2) {
+  background: rgb(221, 255, 71);
+}
+
+/** --- footer --- */
+footer {
+  margin: 10px 0;
+  background: rgb(133, 150, 248);
+  height: 6vh;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /** --- main --- */
+
+  main div div {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /** --- main --- */
+
+  main {
+    flex-direction: row-reverse;
+  }
+
+  main > article {
+    height: 13vh;
+  }
+}
