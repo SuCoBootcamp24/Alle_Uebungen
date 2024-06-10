@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.ttf");
+  font-family: "Monserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 /** ---- BASIC ---- */
@@ -11,7 +11,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Monserrat";
   font-size: 10px;
 }
 
@@ -25,34 +25,162 @@ a {
 img {
   max-width: 100%;
 }
-/** --------------- */
 
-body {
-  position: relative;
-  background: url("../img/ben-gao-EeITZDXMb0M-unsplash.jpg") no-repeat;
-  background-size: cover;
-
-  height: 100vh;
+h1 {
+  font-family: "Monserrat";
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 30px;
 }
 
-div {
-  position: absolute;
-  right: 10%;
-  top: 15%;
-}
-
-div h1,
-div p {
-  font-family: "Poppins";
+h2 {
+  font-family: "Monserrat";
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 40px;
   color: white;
 }
 
-div h1 {
-  margin-bottom: 5%;
-  font-size: 4rem;
+h3 {
+  font-family: "Monserrat";
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 44px;
 }
 
-div p {
-  font-size: 2.5rem;
-  text-align: right;
+h4 {
+  font-family: "Monserrat";
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+p {
+  font-family: "Monserrat";
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 20px;
+}
+
+.sRed {
+  color: red;
+}
+
+.sGreen {
+  color: green;
+}
+
+/** ---- Headder ---- */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  position: relative;
+
+  background: url("../img/header.jpeg") no-repeat;
+  background-size: cover;
+  background-position: 5%;
+
+  height: 60vh;
+  width: 100%;
+}
+
+header div {
+  position: absolute;
+  top: 55%;
+  left: 6%;
+
+  text-align: center;
+}
+
+header div h1 {
+  margin-bottom: 15%;
+}
+
+header div p {
+  font-weight: 700;
+}
+
+/** ---- Nav (Sticky) --- */
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.559);
+  margin-top: -4%;
+  width: 100%;
+
+  padding: 1% 20% 1% 5%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 40%;
+}
+
+/** --- Main Section 1 --- */
+
+.mainS1 {
+  margin-bottom: 2%;
+}
+
+.mainS1 h3 {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.mainS1 .dUnderline {
+  border-bottom: 5px solid black;
+
+  margin: 20px auto 15px auto;
+  width: 100px;
+}
+
+.mainS1 article {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  height: 60vh;
+  width: 100%;
+}
+
+.mainS1 article div {
+  display: flex;
+  justify-content: space-around;
+  height: 25vh;
+  width: 100%;
+}
+
+.mainS1 article div img {
+  width: 30%;
+}
+
+/** ---- Main Section 2 ---*/
+
+.mainS2 {
+  margin-bottom: 5%;
+}
+
+.mainS2 h4 {
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.mainS2 article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 15vh;
+  padding-left: 10%;
 }
