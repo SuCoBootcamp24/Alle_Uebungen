@@ -1,0 +1,18 @@
+/** ---- BASIC ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 10vh 85vh 5vh;
+  grid-template-columns: 20vw 80vw;
+  gap: 2px;
+
+  height: 30vh;
+
+  padding: 1%;
+  color: E9E9E0;
+}
