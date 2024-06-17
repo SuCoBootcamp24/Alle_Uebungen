@@ -1,0 +1,22 @@
+/** ---- BASIC ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+a {
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  max-width: 50%;
+}
