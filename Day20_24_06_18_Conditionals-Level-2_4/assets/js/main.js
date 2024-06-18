@@ -1,14 +1,14 @@
 //1.
 
-function ageConfirm(event) {
-  event.preventDefault();
-  const ageInput = document.querySelector("#age").value;
-  const outputText = document.querySelector(".output");
-  if (ageInput >= 18) {
-    outputText.style.color = "green";
-    outputText.innerText = "Ja, Du kannst Shisha rauchen";
+function math(num, anotherNum) {
+  if (num == anotherNum) {
+    console.log(" Summe 5");
   } else {
-    outputText.style.color = "red";
-    outputText.innerText = "Du darfst noch nicht Shisha rauchen";
+    console.log(num + anotherNum);
   }
 }
+
+math(3, 5);
+math(5, 5);
+math(32, 7);
+math(34, 34);
