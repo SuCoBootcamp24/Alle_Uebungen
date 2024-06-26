@@ -1,7 +1,8 @@
 public class Join {
     public static void main(String[] args) {
-        // Join von Hallo Welt !
-        // die zwischenzeichen können verändert werden
+        // Live Session Challenge 3
+        // Join the args[] argumentes 
+        // The intermediate signs can be changed
     
         String space = args[args.length - 1];
         
