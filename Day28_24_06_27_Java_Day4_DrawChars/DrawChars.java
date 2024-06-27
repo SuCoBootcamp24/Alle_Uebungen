@@ -10,6 +10,8 @@ public class DrawChars {
 
         // self Challenge 1 Create a Chessfield with big Cells.
 
+        //refector methode bigChessfield
+
         // int hight = Integer.parseInt(args[0]);
     
         bigChessfield(6);
@@ -18,47 +20,61 @@ public class DrawChars {
 
     public static void bigChessfield(int size){
         int cellSize = 3;
-        int count = 0;
-        char cellChar = '#';
-    
-        for(int level = 0; level < size; level++) {
-            if (level % 2 == 0 || level == 0) {
-                for (int cellLevel = 0; cellLevel < cellSize; cellLevel++) {
-                    for (int legth = 1; legth <= size; legth++) {
-                        if (legth % 2 != 0) {
-                            cellChar = '#';
-                        } else {
-                            cellChar = ' ';
-                        }
-                        while (count < cellSize + 1) {
-                            System.out.print(cellChar);
-                            count++;
-                        }
-                        count = 0;
+
+
+        for (int level = 0; level < size; level++) {
+            for (int cellLevel = 0; cellLevel < cellSize; cellLevel++) {
+                for (int length = 0; length < size; length++) {
+                    char cellChar = (level + length) % 2 == 0 ? '#' : ' ';
+                    for (int count = 0; count < cellSize; count++) {
+                        System.out.print(cellChar);
                     }
-                    System.out.println("");
                 }
-            } else if (level % 2 != 0 || level != 0) {
-                for (int cellLevel = 0; cellLevel < cellSize; cellLevel++) {
-                    for (int legth = 1; legth <= size; legth++) {
-                    
-                        if (legth % 2 == 0) {
-                            cellChar = '#';
-                        } else {
-                            cellChar = ' ';
-                        }
-                     
-                        while (count < cellSize + 1) {
-                            System.out.print(cellChar);
-                            count++;
-                        }
-                        count = 0;
-                    }
-                    System.out.println("");
-                }
+                System.out.println();
             }
-            
         }
+        //- Old version
+        // int count = 0;
+        // char cellChar = '#';
+    
+        // for(int level = 0; level < size; level++) {
+        //     if (level % 2 == 0 || level == 0) {
+        //         for (int cellLevel = 0; cellLevel < cellSize; cellLevel++) {
+        //             for (int legth = 1; legth <= size; legth++) {
+        //                 if (legth % 2 != 0) {
+        //                     cellChar = '#';
+        //                 } else {
+        //                     cellChar = ' ';
+        //                 }
+        //                 while (count < cellSize + 1) {
+        //                     System.out.print(cellChar);
+        //                     count++;
+        //                 }
+        //                 count = 0;
+        //             }
+        //             System.out.println("");
+        //         }
+        //     } else if (level % 2 != 0 || level != 0) {
+        //         for (int cellLevel = 0; cellLevel < cellSize; cellLevel++) {
+        //             for (int legth = 1; legth <= size; legth++) {
+                    
+        //                 if (legth % 2 == 0) {
+        //                     cellChar = '#';
+        //                 } else {
+        //                     cellChar = ' ';
+        //                 }
+                     
+        //                 while (count < cellSize + 1) {
+        //                     System.out.print(cellChar);
+        //                     count++;
+        //                 }
+        //                 count = 0;
+        //             }
+        //             System.out.println("");
+        //         }
+        //     }
+            
+        // }
     }
 
 
