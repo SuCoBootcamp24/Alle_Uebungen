@@ -26,7 +26,6 @@ public class DrawChars {
                     j++;
                 }
                 System.out.print("\n"); 
-                j = 0;
                 i++;
             }
 
