@@ -15,17 +15,17 @@ public class DrawChars {
         // Live Session Challenge 1
         // Switch for to while loops
 
-        
+
         int i = 0;
-        int j = 0;
+        
 
         while (i < sideLength ) {
-                // draw single line loop
+               int j = 0;
                 while (j < sideLength ) {
                     System.out.print("*");
                     j++;
                 }
-                System.out.print("\n"); // draw \n = new line
+                System.out.print("\n"); 
                 j = 0;
                 i++;
             }
