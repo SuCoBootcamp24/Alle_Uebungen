@@ -5,14 +5,14 @@ public class DrawChars {
          //  Live Session Challenge 3 : the Triangle Methode should center
 
         // int hight = Integer.parseInt(args[0]);
-        trianglReverse(3);
-        triangle(3);
+    
+        triangle(4);
 
     }
 
 
 
-    
+
     public static void trianglReverse(int hight) {
 
         for (int level = 0; level < hight; level++) {
