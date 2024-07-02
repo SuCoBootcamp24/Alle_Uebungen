@@ -2,8 +2,8 @@ public class LiveSession {
     public static void main(String[] args) {
         // LiveSession Challenge 1. create a logic for the method toLowerCase
 
-        String input = "DAS ist3 EIN TesT! Ä";
-       System.out.println(indexOf(input, "EIN"));
+        String input = "Hallo Freunde!";
+       System.out.println(indexOf(input, "und"));
     }
 
     public static String toLowerCase(String input) {
@@ -56,5 +56,30 @@ public class LiveSession {
 
     return -1;
     }
+
+
+    public static int compareTo(String s1, String s2) {
+    if (s1 == null || s2 == null) {
+        throw new NullPointerException("Strings must not be null");
+    }
+
+    int len1 = s1.length();
+    int len2 = s2.length();
+    int minLength = Math.min(len1, len2);
+
+    for (int i = 0; i < minLength; i++) {
+        char c1 = s1.charAt(i);
+        char c2 = s2.charAt(i);
+        if (c1 != c2) {
+            return c1 - c2;
+        }
+    }
+
+    return len1 - len2;
+}
+
+
+
+
 
 }
