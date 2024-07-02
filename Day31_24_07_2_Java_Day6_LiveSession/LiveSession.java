@@ -2,9 +2,8 @@ public class LiveSession {
     public static void main(String[] args) {
         // LiveSession Challenge 1. create a logic for the method toLowerCase
 
-        String input = "DAS ist3 EIN TesT!";
-        System.out.println(input);
-        System.out.println(toLowerCase(input));
+        String input = "DAS ist3 EIN TesT! Ä";
+       System.out.println(indexOf(input, "EIN"));
     }
 
     public static String toLowerCase(String input) {
@@ -30,4 +29,30 @@ public class LiveSession {
     
             return result.toString();
     }
-}
+
+
+        // challenge2. implements the own indexOf Methode:
+    // input = "Hallo Freunde!"
+    // search = "und"
+    // indexOf(input, search) --> 9
+    // indexOf(input, "blabla") --> -1 (not exist)
+    
+    public static int indexOf(String input, String searchInput) {
+
+
+            if (input == null || searchInput == null || searchInput.length() > input.length()) {
+                return -1;
+            }
+
+            for (int i = 0; i <= input.length() - searchInput.length(); i++) {
+              
+                if (input.substring(i, i + searchInput.length()).equals(searchInput)) {
+                    return i;
+                }
+            }
+        
+            return -1;
+        }
+
+    }
+
