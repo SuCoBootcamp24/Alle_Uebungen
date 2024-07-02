@@ -3,7 +3,7 @@ public class LiveSession {
         // LiveSession Challenge 1. create a logic for the method toLowerCase
 
         String input = "Hallo Freunde!";
-       System.out.println(indexOf(input, "und"));
+       System.out.println(substring(input, 5, 9));
     }
 
     public static String toLowerCase(String input) {
@@ -57,6 +57,23 @@ public class LiveSession {
     return -1;
     }
 
+    public static String substring(String inputString, int indexStart, int indexEnd) {
+        // Challenge 3. Create a substring method with logic
+        if (inputString == null) {
+            throw new NullPointerException("The input string is null");
+        }
+        if (indexStart < 0 || indexEnd > inputString.length() || indexStart > indexEnd) {
+            throw new IndexOutOfBoundsException("Invalid start or end index");
+        }
+    
+        
+        char[] result = new char[indexEnd - indexStart];
+        for (int i = indexStart; i < indexEnd; i++) {
+            result[i - indexStart] = inputString.charAt(i);
+        }
+        
+        return new String(result);
+    }
 
     public static int compareTo(String s1, String s2) {
     if (s1 == null || s2 == null) {
@@ -77,9 +94,5 @@ public class LiveSession {
 
     return len1 - len2;
 }
-
-
-
-
 
 }
