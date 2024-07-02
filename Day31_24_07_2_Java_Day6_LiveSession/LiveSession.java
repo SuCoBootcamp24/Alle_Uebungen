@@ -38,21 +38,23 @@ public class LiveSession {
     // indexOf(input, "blabla") --> -1 (not exist)
     
     public static int indexOf(String input, String searchInput) {
-
-
-            if (input == null || searchInput == null || searchInput.length() > input.length()) {
-                return -1;
-            }
-
-            for (int i = 0; i <= input.length() - searchInput.length(); i++) {
-              
-                if (input.substring(i, i + searchInput.length()).equals(searchInput)) {
-                    return i;
-                }
-            }
-        
-            return -1;
-        }
-
+    if (input == null || searchInput == null || searchInput.length() > input.length()) {
+        return -1;
     }
 
+    for (int i = 0; i <= input.length() - searchInput.length(); i++) {
+        int j;
+        for (j = 0; j < searchInput.length(); j++) {
+            if (input.charAt(i + j) != searchInput.charAt(j)) {
+                break;
+            }
+        }
+        if (j == searchInput.length()) {
+            return i;
+        }
+    }
+
+    return -1;
+    }
+
+}
