@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class LiveSession {
     public static void main(String[] args) {
-        // LiveSession Challenge 1. create a logic for the method toLowerCase
+        // LiveSession Challenge 1. create a logic for the method split()
 
         String input = "Hallo Freunde!";
         String[] test = split(input, "a");
