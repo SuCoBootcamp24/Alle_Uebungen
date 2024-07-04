@@ -4,12 +4,9 @@ public class math {
     }
 
     public static int faculty(int n){
-        int index = 1;
-        return faculty(index, n);
-    }
-
-    public static int faculty(int index, int n) {
-        if (index == n) return n;
-        return index * faculty(index + 1, n);
+        if (n == 0) {
+            return 1;
+        }
+        return n * faculty(n - 1);
     }
 }
