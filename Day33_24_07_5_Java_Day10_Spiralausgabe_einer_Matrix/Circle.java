@@ -57,35 +57,35 @@ public class Circle {
         showCircleOutputRecusiv(matrix, 0, 0, m, n);
     }
 
-
     private static void showCircleOutputRecusiv(int[][] matrix, int startX, int startY, int m, int n) {
-        if (m <= 0 || n <= 0) return;
+          // Basisfall
+          if (m <= 0 || n <= 0) return;
 
-        // Traverse the top row from the remaining rows
-        for (int i = 0; i < n; i++) {
-            System.out.print(matrix[startX][startY + i] + " ");
-        }
+          // Die oberste Reihe der verbleibenden Reihen durchlaufen
+          for (int i = 0; i < n; i++) {
+              System.out.print(matrix[startX][startY + i] + " ");
+          }
+  
+          // Die letzte Spalte der verbleibenden Spalten durchlaufen
+          for (int i = 1; i < m; i++) {
+              System.out.print(matrix[startX + i][startY + n - 1] + " ");
+          }
+  
+          // Die unterste Reihe der verbleibenden Reihen durchlaufen
+          if (m > 1) {
+              for (int i = n - 2; i >= 0; i--) {
+                  System.out.print(matrix[startX + m - 1][startY + i] + " ");
+              }
+          }
+  
+          // Die erste Spalte der verbleibenden Spalten durchlaufen
+          if (n > 1) {
+              for (int i = m - 2; i > 0; i--) {
+                  System.out.print(matrix[startX + i][startY] + " ");
+              }
+          }
 
-        // Traverse the last column from the remaining columns
-        for (int i = 1; i < m; i++) {
-            System.out.print(matrix[startX + i][startY + n - 1] + " ");
-        }
-
-        // Traverse the bottom row from the remaining rows
-        if (m > 1) {
-            for (int i = n - 2; i >= 0; i--) {
-                System.out.print(matrix[startX + m - 1][startY + i] + " ");
-            }
-        }
-
-        // Traverse the first column from the remaining columns
-        if (n > 1) {
-            for (int i = m - 2; i > 0; i--) {
-                System.out.print(matrix[startX + i][startY] + " ");
-            }
-        }
-
-        // Recursive call for the next layer of the matrix
+         // Rekursiver Aufruf für die nächste Ebene der Matrix
         showCircleOutputRecusiv(matrix, startX + 1, startY + 1, m - 2, n - 2);
     }
 
