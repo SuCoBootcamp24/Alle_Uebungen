@@ -1,12 +1,13 @@
 public class Circle {
     public static void main(String[] args) {
-    int[][] matrix = {{1,  2,  3,  4},
-                      {5,  6,  7,  8},
-                      {9, 10, 11, 12},
-                      {13, 14, 15, 16}};
-    
-    showCircleOutput(matrix);
-
+        int[][] matrix = {{1,  2,  3,  4},
+                          {5,  6,  7,  8},
+                          {9, 10, 11, 12},
+                          {13, 14, 15, 16}};
+        
+        showCircleOutput(matrix);
+        System.out.println("");
+        showCircleOutputRecusiv(matrix);
     }
 
     private static void showCircleOutput(int[][] matrix ) {
@@ -47,11 +48,45 @@ public class Circle {
                 }
                 left++;
             }
-
         }
-
-
     }
 
+    private static void showCircleOutputRecusiv(int[][] matrix ) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        showCircleOutputRecusiv(matrix, 0, 0, m, n);
+    }
+
+
+    private static void showCircleOutputRecusiv(int[][] matrix, int startX, int startY, int m, int n) {
+        if (m <= 0 || n <= 0) return;
+
+        // Traverse the top row from the remaining rows
+        for (int i = 0; i < n; i++) {
+            System.out.print(matrix[startX][startY + i] + " ");
+        }
+
+        // Traverse the last column from the remaining columns
+        for (int i = 1; i < m; i++) {
+            System.out.print(matrix[startX + i][startY + n - 1] + " ");
+        }
+
+        // Traverse the bottom row from the remaining rows
+        if (m > 1) {
+            for (int i = n - 2; i >= 0; i--) {
+                System.out.print(matrix[startX + m - 1][startY + i] + " ");
+            }
+        }
+
+        // Traverse the first column from the remaining columns
+        if (n > 1) {
+            for (int i = m - 2; i > 0; i--) {
+                System.out.print(matrix[startX + i][startY] + " ");
+            }
+        }
+
+        // Recursive call for the next layer of the matrix
+        showCircleOutputRecusiv(matrix, startX + 1, startY + 1, m - 2, n - 2);
+    }
 
 }
