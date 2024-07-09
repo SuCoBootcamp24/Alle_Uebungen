@@ -1,20 +1,26 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Bankkonto {
+
+    private static HashMap<String, Bankkonto> bestandsKonten = new HashMap<>();
+
 
     private String kontoinhaber;
     private String kontonummer;
     private double kontostand;
     private ArrayList<String> ktnAktivitaet = new ArrayList<>();
 
-    public Bankkonto(String kontoinhaber, String kontonummer) {
+      public Bankkonto(String kontoinhaber, String kontonummer) {
         this.kontoinhaber = kontoinhaber;
         this.kontonummer = kontonummer;
         this.kontostand = 0.0f;
         LocalDateTime currentDateTime = LocalDateTime.now();
         ktnAktivitaet.add(currentDateTime + "  ERSTELLT          Bankinhaber: " + this.kontoinhaber + "  Kontonummer: " + this.kontonummer + "   Gesamt: " +  this.kontostand + " €");
 
+        bestandsKonten.put(kontonummer, this);
     }
 
     // -------------
@@ -26,7 +32,7 @@ public class Bankkonto {
         this.kontoinhaber = kontoinhaber;
     }
 
-
+   // __  
     public String getKontonummer() {
         return kontonummer;
     }
@@ -36,6 +42,7 @@ public class Bankkonto {
     }
 
 
+    // __  
     public double getKontostand() {
         return kontostand;
     }
@@ -73,13 +80,18 @@ public class Bankkonto {
         System.out.println("Kontostand: " + getKontostand());
     }
 
-    public boolean ueberweisen(Bankkonto empfaenger, double betrag) {
-        if (getKontostand() - betrag >= 0) {
-            setKontostand(getKontostand() - betrag);
-            empfaenger.empfangen(this, betrag);
-            LocalDateTime currentDateTime = LocalDateTime.now();
-            ktnAktivitaet.add(currentDateTime + "  UEBERWEISUNG      Empfaenger: " + empfaenger.getKontoinhaber() + " " + empfaenger.kontonummer + "      Betrag: -" + betrag + "  Gesamt: " +  this.kontostand + " €");
-            return true;
+    public boolean ueberweisen(String empfaengerKtnNr, double betrag) {
+       
+        if (empfaengerKtnNr != null) {
+            Bankkonto empfaenger = kontoSuche(empfaengerKtnNr);
+            if (empfaenger == null) return false;
+            if (getKontostand() - betrag >= 0) {
+                setKontostand(getKontostand() - betrag);
+                empfaenger.empfangen(this, betrag);
+                LocalDateTime currentDateTime = LocalDateTime.now();
+                ktnAktivitaet.add(currentDateTime + "  UEBERWEISUNG      Empfaenger: " + empfaenger.getKontoinhaber() + " " + empfaenger.kontonummer + "      Betrag: -" + betrag + "  Gesamt: " +  this.kontostand + " €");
+                return true;
+            }
         }
         return false;
     }
@@ -95,6 +107,28 @@ public class Bankkonto {
         for(int i = 0; i < ktnAktivitaet.size(); i++) {
             System.out.println(ktnAktivitaet.get(i));
         }
+    }
+
+    //--------------------
+
+
+    public static void alleKonten() {
+        System.out.println("Anzahl der Konten: " + bestandsKonten.size());
+        for (Map.Entry<String,Bankkonto> ktn : bestandsKonten.entrySet()) {
+            Bankkonto ktnData = ktn.getValue();
+            System.out.println(ktnData.kontonummer + "   " + ktnData.kontoinhaber);
+        }
+    }
+
+
+    public Bankkonto kontoSuche(String empfaengeString) {
+
+        for (Map.Entry<String,Bankkonto> ktn : bestandsKonten.entrySet()) {
+            if (ktn.getKey().equals(empfaengeString)) {
+                return ktn.getValue();
+            }
+        }
+        return null;
     }
 
 
