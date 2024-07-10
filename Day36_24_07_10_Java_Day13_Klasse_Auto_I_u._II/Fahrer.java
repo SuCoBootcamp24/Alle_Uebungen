@@ -49,6 +49,7 @@ public class Fahrer {
                 auto.setKmStand(auto.getKmStand() + kilometer);
                 System.out.println("bruuuummmm");
                 auto.setTankinhalt(auto.getTankinhalt() - ((auto.getVerbrauch() / 100) * kilometer));
+                radarkontrolle();
                 } else System.out.println("Auto Springt nicht an. Tank ist Leer");
             } else {
                 throw new IllegalArgumentException("Kilometer dürfen nicht negativ sein");
@@ -56,6 +57,35 @@ public class Fahrer {
         } else {
             System.out.println("Fahrer ist unter 18J");
         }
+    }
+
+    private void radarkontrolle() {
+        double maxkmh = 55;
+        double gefahreneKmh = Math.random() * 80 + 10;
+       if(gefahreneKmh >= maxkmh) {
+        blitz(Math.round(gefahreneKmh - maxkmh));
+        }
+    }
+
+    private void blitz(double kmh) {
+        String[] blitzer = {
+            "                      /#| ",
+            "      ___________   /###| ",
+            "     |  _____  |  /#####| ",
+            "     | |     | |/#######| ",
+            "     | |BLITZ| |########| ",
+            "     | |_____| |\\#######|",
+            " ____|_________|_ \\#####|",
+            "|                |  \\###|",
+            "|                |    \\#|",
+            "|  __            |        ",
+            "|_/  \\__________|        "
+        };
+
+        for (String zeile : blitzer) {
+            System.out.println(zeile);
+        }
+        System.out.println("BLITZ!!! Der fahrer war zu schnell und wurde geblitzt. es waren " + kmh + " km/h zuviel");
     }
 
    
