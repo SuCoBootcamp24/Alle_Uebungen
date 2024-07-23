@@ -25,8 +25,8 @@ public class Fernseher extends Geraet implements Bluetoothfaehig {
     //----
     @Override
     public void anzeigen() {
-        System.out.println("Fernseher-Details: ");
-        System.out.println("Fernseher " + getMarke() + ", " + getModell() + ", Bildschirmgroesse: " + bildschirmgroese + "\"");
+        super.anzeigen();
+        System.out.println("Fernseher Bildschirmgroesse: " + bildschirmgroese + "\"");
     }
 
     @Override

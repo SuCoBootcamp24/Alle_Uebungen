@@ -27,8 +27,8 @@ public class Smartphone extends Geraet implements Internetfaehig, Bluetoothfaehi
 
     @Override
     public void anzeigen() {
-        System.out.println("Smartphone-Details:");
-        System.out.printf("Smartphone %s %s, Betriebssystem: %s%n", getMarke(), getModell(), betriebssystem);
+        super.anzeigen();
+        System.out.println("Smartphone Betriebssystem: " + betriebssystem);
     }
 
     @Override

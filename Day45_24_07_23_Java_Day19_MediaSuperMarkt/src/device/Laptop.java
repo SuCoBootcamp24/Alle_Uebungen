@@ -23,8 +23,7 @@ public class Laptop extends Geraet implements Internetfaehig {
     //----
     @Override
     public void anzeigen() {
-        System.out.println("Smartphone-Details:");
-        System.out.printf("Smartphone %s %s, Betriebssystem: %s%n", getMarke(), getModell(), getProzessor());
+        System.out.printf("Laptop Prozessor: " + getProzessor());
     }
 
     @Override

@@ -48,17 +48,8 @@ public class Geraet {
     }
 
     public void anzeigen(){
-        System.out.println("Gerätedetails: ");
         System.out.printf("Gerät: %s %s%n", getMarke(), getModell());
     }
-
-    //----Klassen Methode
-    public static void testGeraet(Geraet g) {
-        g.einschalten();
-        g.anzeigen();
-        g.ausschalten();
-    }
-
 
 
 }
