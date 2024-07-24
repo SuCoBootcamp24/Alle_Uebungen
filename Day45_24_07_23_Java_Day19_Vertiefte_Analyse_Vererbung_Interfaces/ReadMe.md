@@ -22,16 +22,26 @@
   - **Mehrfachvererbung**: Eine Klasse kann mehrere Interfaces implementieren, was in Sprachen wie Java Mehrfachvererbung ermöglicht.
   - **Flexibilität**: Interfaces erlauben eine lose Kopplung zwischen Klassen und fördern polymorphes Verhalten.
 
+### Abstrakte Klassen
+
+**Definition und Hauptmerkmale:**
+- **Definition**: Eine abstrakte Klasse ist eine Klasse, die nicht instanziiert werden kann und dazu dient, als Basisklasse für andere Klassen zu fungieren. Sie kann sowohl abstrakte Methoden (ohne Implementierung) als auch vollständig implementierte Methoden enthalten.
+
+- **Hauptmerkmale**:
+  - **Teilweise Abstraktion**: Abstrakte Klassen können sowohl abstrakte als auch konkrete Methoden enthalten.
+  - **Vererbung**: Klassen, die von einer abstrakten Klasse erben, müssen alle abstrakten Methoden implementieren.
+  - **Verwendung von Konstruktoren**: Abstrakte Klassen können Konstruktoren haben, die von den Unterklassen verwendet werden können.
+
 ### Unterschiede und Gemeinsamkeiten
 
 **Unterschiede**:
 - **Struktur vs. Verhalten**: Vererbung definiert eine strukturelle Beziehung (ist-ein), während Interfaces eine verhaltensbasierte Beziehung (kann) darstellen.
-- **Implementierung**: Bei Vererbung werden Methoden und Eigenschaften geerbt und können überschrieben werden. Bei Interfaces müssen alle Methoden vollständig in der implementierenden Klasse definiert werden.
-- **Mehrfachvererbung**: Interfaces unterstützen Mehrfachvererbung, während Vererbung in vielen Sprachen wie Java nur Einfachvererbung erlaubt.
+- **Implementierung**: Bei Vererbung werden Methoden und Eigenschaften geerbt und können überschrieben werden. Bei Interfaces müssen alle Methoden vollständig in der implementierenden Klasse definiert werden. Abstrakte Klassen bieten eine Mischung aus beidem, da sie sowohl konkrete als auch abstrakte Methoden enthalten können.
+- **Mehrfachvererbung**: Interfaces unterstützen Mehrfachvererbung, während Vererbung und abstrakte Klassen in vielen Sprachen wie Java nur Einfachvererbung erlauben.
 
 **Gemeinsamkeiten**:
-- Beide Konzepte fördern die Wiederverwendbarkeit und Erweiterbarkeit von Code.
-- Beide ermöglichen polymorphes Verhalten, indem sie erlauben, dass Objekte verschiedener Klassen gleich behandelt werden, wenn sie von derselben Superklasse erben oder dasselbe Interface implementieren.
+- Alle drei Konzepte fördern die Wiederverwendbarkeit und Erweiterbarkeit von Code.
+- Alle ermöglichen polymorphes Verhalten, indem sie erlauben, dass Objekte verschiedener Klassen gleich behandelt werden, wenn sie von derselben Superklasse erben, dasselbe Interface implementieren oder von derselben abstrakten Klasse erben.
 
 ### Vor- und Nachteile
 
@@ -70,6 +80,12 @@
   - Wenn Klassen unterschiedliche Hierarchien haben, aber dennoch ähnliche Fähigkeiten besitzen sollen.
   - Wenn Mehrfachvererbung benötigt wird.
   - Wenn lose Kopplung und Flexibilität im Design gewünscht sind.
+
+**Abstrakte Klassen**:
+- **Wann sind abstrakte Klassen die bessere Wahl?**
+  - Wenn sowohl gemeinsame Code-Implementierungen als auch Abstraktion erforderlich sind.
+  - Wenn eine Basisklasse benötigt wird, die nicht instanziiert werden soll.
+  - Wenn man eine Kombination aus konkreten und abstrakten Methoden bieten möchte.
 
 ### Reale Anwendungsbeispiele
 
@@ -134,6 +150,45 @@ public class Main {
 
 - **Erläuterung**: Hier haben sowohl Vögel als auch Flugzeuge die Fähigkeit zu fliegen, aber es gibt keine strukturelle Beziehung zwischen ihnen. Das Interface Flyable definiert diese Fähigkeit, und die Implementierung wird in den jeweiligen Klassen bereitgestellt.
 
+**bstrakte Klassen**:
+
+-**Beispiel**: Form-Hierarchie
+```java
+abstract class Shape {
+    abstract void draw();
+
+    void commonMethod() {
+        System.out.println("This is a common method for all shapes");
+    }
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+class Square extends Shape {
+    void draw() {
+        System.out.println("Drawing a square");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape circle = new Circle();
+        Shape square = new Square();
+
+        circle.draw();
+        circle.commonMethod();
+        square.draw();
+        square.commonMethod();
+    }
+}
+```
+-**Erläuterung**: Hier definiert die abstrakte Klasse Shape sowohl abstrakte als auch konkrete Methoden. Unterklassen wie Circle und Square müssen die abstrakte Methode draw implementieren, können aber auch die konkrete Methode commonMethod verwenden.
+
+
 **Kombination beider Konzepte**:
 
 -**Beispiel**: Fahrzeuge mit Antriebsarten
@@ -167,4 +222,4 @@ public class Main {
 
 ## 3. Reflexion und Dokumentation
 
-Die Konzepte der Vererbung und Interfaces sind wesentliche Bestandteile der OOP. Vererbung fördert die Wiederverwendbarkeit und Erweiterbarkeit von Code durch die Definition hierarchischer Beziehungen, während Interfaces die Flexibilität und die Möglichkeit zur Mehrfachvererbung bieten. Die Wahl zwischen Vererbung und Interfaces hängt von den spezifischen Anforderungen des Designs und den gewünschten Beziehungen zwischen den Klassen ab. Durch das Verständnis der Stärken und Schwächen beider Konzepte kann man fundierte Entscheidungen treffen, die zu sauberem, wartbarem und erweiterbarem Code führen.
+Die Konzepte der Vererbung, Interfaces und abstrakten Klassen sind wesentliche Bestandteile der OOP. Vererbung fördert die Wiederverwendbarkeit und Erweiterbarkeit von Code durch die Definition hierarchischer Beziehungen, während Interfaces die Flexibilität und die Möglichkeit zur Mehrfachvererbung bieten. Abstrakte Klassen bieten eine Mischung aus beidem und ermöglichen teilweise Abstraktion mit gemeinsamer Code-Implementierung. Die Wahl zwischen diesen Konzepten hängt von den spezifischen Anforderungen des Designs und den gewünschten Beziehungen zwischen den Klassen ab. Durch das Verständnis der Stärken und Schwächen jedes Konzepts kann man fundierte Entscheidungen treffen, die zu sauberem, wartbarem und erweiterbarem Code führen.
