@@ -68,8 +68,7 @@ public class Buch {
 
     //----
     public static void buchInRegalStellen(Buch buch) {
-        if (BUCH_REGAL.containsKey(buch)) BUCH_REGAL.put(buch, BUCH_REGAL.get(buch) + 1);
-        else BUCH_REGAL.put(buch, 1);
+        BUCH_REGAL.put(buch, BUCH_REGAL.getOrDefault(buch, 0) + 1);
     }
 
     public static void zeigeBücherInRegal() {
