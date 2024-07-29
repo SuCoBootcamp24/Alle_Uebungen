@@ -130,7 +130,7 @@ public class Main {
         System.out.println();
         System.out.println("Statistik für ArrayList und LinkedList:");
         System.out.println("--------------------------------------------------------------------");
-        System.out.printf("%-20s %10s %10s\n", "", "ArrayList", "LinkedList");
+        System.out.printf("%-40s %10s %10s\n", "", "ArrayList", "    LinkedList");
         System.out.println("--------------------------------------------------------------------");
         System.out.printf("%-40s %10s %10s %s\n", "  Hinzufügen von Elementen:", arrayListAddElementsTime , linkedListAddElementsTime, ANSI_YELLOW_BACKG_BLACK_TEXT + "ms" + ANSI_RESET);
         System.out.printf("%-40s %10d %10d %s\n", "  Hinzufügen von Elementen am Anfang:", arrayListAddFirstElementTime, LinkedListAddFirstElementTime, ANSI_GREEN_BACKG_BLACK_TEXT + "ns" + ANSI_RESET);
