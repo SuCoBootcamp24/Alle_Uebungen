@@ -1,131 +1,120 @@
 package de.supercode;
 
-
-public class MyLinkedList<E> {
-    private Node<E> head;
-    private Node<E> tail;
-    private int size;
+public class MyLinkedList {
+    private Node head;
 
     public MyLinkedList() {
         this.head = null;
-        this.tail = null;
-        this.size = 0;
     }
 
-    public void addFirst(E data) {
-        Node<E> newNode = new Node<>(data);
+    public void add(int data) {
+        Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
-            tail = newNode;
         } else {
-            newNode.setNext(head);
-            head.setPrev(newNode);
-            head = newNode;
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
         }
-        size++;
     }
 
-    public void addLast(E data) {
-        Node<E> newNode = new Node<>(data);
-        if (tail == null) {
+    public void add(int index, int data) {
+        Node newNode = new Node(data);
+        if (index == 0) {
+            newNode.next = head;
             head = newNode;
-            tail = newNode;
         } else {
-            newNode.setPrev(tail);
-            tail.setNext(newNode);
-            tail = newNode;
+            Node current = head;
+            for (int i = 0; i < index - 1 && current != null; i++) {
+                current = current.next;
+            }
+            if (current == null) {
+                throw new IndexOutOfBoundsException("Index out of bounds");
+            }
+            newNode.next = current.next;
+            current.next = newNode;
         }
-        size++;
     }
 
-    public E removeFirst() {
+
+    public void remove(int index) {
         if (head == null) {
-            throw new IllegalStateException("List is empty");
+            throw new IndexOutOfBoundsException("Index out of bounds");
         }
-        E data = head.getData();
-        head = head.getNext();
-        if (head != null) {
-            head.setPrev(null);
+        if (index == 0) {
+            head = head.next;
         } else {
-            tail = null;
+            Node current = head;
+            for (int i = 0; i < index - 1 && current != null; i++) {
+                current = current.next;
+            }
+            if (current == null || current.next == null) {
+                throw new IndexOutOfBoundsException("Index out of bounds");
+            }
+            current.next = current.next.next;
         }
-        size--;
-        return data;
     }
 
-    public E removeLast() {
-        if (tail == null) {
-            throw new IllegalStateException("List is empty");
+
+    public int get(int index) {
+        Node current = head;
+        for (int i = 0; i < index && current != null; i++) {
+            current = current.next;
         }
-        E data = tail.getData();
-        tail = tail.getPrev();
-        if (tail != null) {
-            tail.setNext(null);
-        } else {
-            head = null;
+        if (current == null) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
         }
-        size--;
-        return data;
+        return current.data;
     }
+
 
     public boolean isEmpty() {
         return head == null;
     }
 
+
     public void printList() {
-        Node<E> current = head;
+        Node current = head;
         while (current != null) {
-            System.out.print(current.getData() + " ");
-            current = current.getNext();
+            System.out.print(current.data + " ");
+            current = current.next;
         }
         System.out.println();
     }
 
+
     public void reverse() {
-        Node<E> current = head;
-        Node<E> temp = null;
-
-        // Swap next and prev for all nodes of the list
+        Node previous = null;
+        Node current = head;
+        Node next;
         while (current != null) {
-            temp = current.getPrev();
-            current.setPrev(current.getNext());
-            current.setNext(temp);
-            current = current.getPrev();
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
         }
-
-        // Before changing head, check for the cases like empty list and list with only one node
-        if (temp != null) {
-            head = temp.getPrev();
-        }
+        head = previous;
     }
 
-    public E getKthFromEnd(int k) {
-        if (k > size || k <= 0) {
-            throw new IllegalArgumentException("Invalid value of k: " + k);
+
+    public int getKthFromEnd(int k) {
+        if (head == null) {
+            throw new IllegalArgumentException("List is empty");
         }
-
-        Node<E> front = head;
-        Node<E> back = head;
-
-        // Move front k-1 steps ahead
-        for (int i = 0; i < k - 1; i++) {
-            if (front != null) {
-                front = front.getNext();
+        Node fast = head;
+        Node slow = head;
+        for (int i = 0; i < k; i++) {
+            if (fast == null) {
+                throw new IllegalArgumentException("k is greater than the size of the list");
             }
+            fast = fast.next;
         }
-
-        // Move both front and back until front reaches the end
-        while (front != null && front.getNext() != null) {
-            front = front.getNext();
-            back = back.getNext();
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
         }
-
-        return back.getData();
+        return slow.data;
     }
-
-    public int size() {
-        return size;
-    }
-
-    // Additional methods can be implemented as needed
 }
