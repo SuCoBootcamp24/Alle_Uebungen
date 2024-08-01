@@ -21,7 +21,7 @@ public class Main {
             }
 
             if (userInput.equals("LISTE")) {
-                System.out.println(namelist.isEmpty() ? "Keine Namen in der Liste." : "Namen in der Liste:\n" + String.join("\n", namelist));
+                System.out.println(namelist.isEmpty() ? "Keine Namen in der Liste." : STR."Namen in der Liste:\n\{String.join("\n", namelist)}");
             } else if (userInput.equals("ENDE")) {
                 break;
             } else {
