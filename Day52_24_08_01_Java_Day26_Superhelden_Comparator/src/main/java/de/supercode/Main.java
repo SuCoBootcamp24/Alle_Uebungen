@@ -40,7 +40,7 @@ public class Main {
 
     private static void printList(ArrayList<Superhero> superheroes) {
         superheroes.forEach(System.out::println);
-        
+
         System.out.println();
         System.out.println();
     }
