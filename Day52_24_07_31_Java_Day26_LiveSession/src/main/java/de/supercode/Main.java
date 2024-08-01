@@ -12,7 +12,7 @@ public class Main {
 
         while (true) {
             System.out.println("Bitte gebe einen Namen, \"LISTE\" (Zur Ausgabe aller Namen) oder zum Beenden \"ENDE\" ein:");
-            String userInput = scanner.nextLine();
+            String userInput = scanner.nextLine().trim();
 
             if (userInput.equals("LISTE")) {
                 System.out.println(namelist.isEmpty() ? "Keine Namen in der Liste." : "Namen in der Liste:\n" + String.join("\n", namelist));
