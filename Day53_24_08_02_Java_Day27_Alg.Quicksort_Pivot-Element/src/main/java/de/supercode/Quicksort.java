@@ -76,6 +76,7 @@ public class Quicksort {
 
     private static void quickSortPivotMid(int[] array, int low, int high) {
         if (low < high) {
+
             int pivot = partitionPivotMid(array, low, high);
 
             quickSortPivotMid(array, low, pivot - 1);
@@ -84,7 +85,10 @@ public class Quicksort {
     }
 
     private static int partitionPivotMid(int[] array, int low, int high) {
-        int pivot = array[(low + high) / 2];
+        int mid = (low + high) / 2;
+        int pivot = array[mid];
+        swap(array, mid, high );
+
         int i = (low - 1);
 
         for (int j = low; j < high; j++) {
