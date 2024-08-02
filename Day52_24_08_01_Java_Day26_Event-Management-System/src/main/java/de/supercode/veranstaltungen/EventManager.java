@@ -16,6 +16,14 @@ public class EventManager {
         this.teilnehmerVerwByEvent = new HashMap<>();
     }
 
+    public HashMap<LocalDate, List<Veranstaltung>> getEventMap() {
+        return eventMap;
+    }
+
+    public HashMap<Veranstaltung, HashMap<String, Set<Rolle>>> getTeilnehmerVerwByEvent() {
+        return teilnehmerVerwByEvent;
+    }
+
     public void addEvent(LocalDate date, Veranstaltung event) {
         eventMap.computeIfAbsent(date, k -> new ArrayList<>()).add(event);
         teilnehmerVerwByEvent.putIfAbsent(event, new HashMap<>());
