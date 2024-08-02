@@ -9,8 +9,7 @@ public class Main {
         displayArray(list);
         System.out.println();
 
-
-        System.out.println("---------------Pivot mid----------------");
+        System.out.println("---------------Pivot Low----------------");
         int[] list2 = new int[] {8,3,988,4,2,6,10000,45,57,78,0,64,334,6789,875,789,543,567,8900,7,433,1};
         displayArray(list2);
         Quicksort.quickSortPivotHigh(list2);
@@ -18,11 +17,19 @@ public class Main {
         System.out.println();
 
 
-        System.out.println("---------------Pivot random----------------");
+        System.out.println("---------------Pivot mid----------------");
         int[] list3 = new int[] {8,3,988,4,2,6,10000,45,57,78,0,64,334,6789,875,789,543,567,8900,7,433,1};
         displayArray(list3);
         Quicksort.quickSortPivotHigh(list3);
         displayArray(list3);
+        System.out.println();
+
+
+        System.out.println("---------------Pivot random----------------");
+        int[] list4 = new int[] {8,3,988,4,2,6,10000,45,57,78,0,64,334,6789,875,789,543,567,8900,7,433,1};
+        displayArray(list4);
+        Quicksort.quickSortPivotHigh(list4);
+        displayArray(list4);
         System.out.println();
 
 

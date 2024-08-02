@@ -36,6 +36,39 @@ public class Quicksort {
 
 
     //------------
+    public static void quickSortPivotLow(int[] array) {
+        if (array.length < 1) return;
+        else quickSortPivotHigh(array, 0, array.length -1);
+    }
+
+    private static void quickSortPivotLow(int[] array, int low, int high) {
+        if (low < high) {
+            int pivot = partitionPivotLow(array, low, high);
+
+            quickSortPivotLow(array, low, pivot - 1);
+            quickSortPivotLow(array, pivot + 1, high);
+        }
+    }
+
+    private static int partitionPivotLow(int[] array, int low, int high) {
+        int pivot = array[low];
+        int i = (low - 1);
+
+        for (int j = low; j < high; j++) {
+            if (array[j] <= pivot) {  // falls von gros zu kein sotiert muss hier das < gedreht werden
+                i++;
+
+                swap(array, i, j);
+            }
+        }
+        swap(array, i + 1, high);
+
+        return (i + 1);
+    }
+
+
+    //------------
+
     public static void quickSortPivotMid(int[] array) {
         if (array.length < 1) return;
         else quickSortPivotMid(array, 0, array.length -1);
