@@ -1,9 +1,10 @@
 package de.supercode.personen;
 
+import javax.swing.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Person {
+public class Person{
 
     private String name;
 
