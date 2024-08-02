@@ -106,7 +106,7 @@ public class Quicksort {
 
     //------------
     public static void quickSortPivotRandom(int[] array) {
-        if (array.length < 1) return;
+        if (array == null || array.length < 1) return;
         else quickSortPivotRandom(array, 0, array.length -1);
     }
 
@@ -120,7 +120,11 @@ public class Quicksort {
     }
 
     private static int partitionPivotRandom(int[] array, int low, int high) {
-        int pivot = array[(int) (Math.random() * array.length-1)];
+        int random = low + (int) (Math.random() * (high - low + 1));
+        int pivot = array[random];
+
+        swap(array, random, high);
+
         int i = (low - 1);
 
         for (int j = low; j < high; j++) {
