@@ -40,11 +40,12 @@ public class Library {
     // Methoden zum Hinzufügen von Büchern und Mitgliedern
 
     public void addBookInTheLibrary(Book book) {
-        if (!books.contains(book)) books.add(book);
+        books.add(book);
     }
 
     public void addMemberToTheLibrary(Member member) {
         if (!members.contains(member)) members.add(member);
+        else throw new IllegalArgumentException("Member is already in the library");
     }
 
     //-----------------------
@@ -61,7 +62,7 @@ public class Library {
 
     // Ein Buch zurückgeben.
 
-    public void returnBook(int memberId, String book) {
+    public void returnBorrowBook(int memberId, String book) {
         Member member = getMember(memberId);
         member.returnBook(getBook(book).getFirst());
     }

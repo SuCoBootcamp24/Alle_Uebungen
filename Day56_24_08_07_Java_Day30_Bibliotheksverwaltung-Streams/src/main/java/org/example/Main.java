@@ -36,7 +36,7 @@ public class Main {
         library.printTop5BorrowedBooks();
 
 
-        library.returnBook(101, "The Lord of the Rings");
+        library.returnBorrowBook(101, "The Lord of the Rings");
 
 
 
