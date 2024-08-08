@@ -96,12 +96,12 @@ public class Library {
 
     // Top 5 der aktuell meistgeliehenen Bücher
     public void printTop5BorrowedBooks() {
-        // Count the number of times each book is borrowed using streams
-        Map<String, Long> bookBorrowCount = members.stream()
-                .flatMap(member -> member.getBorrowedBooks().stream()) // Flatten the list of borrowed books
-                .collect(Collectors.groupingBy(Book::getTitle, Collectors.counting())); // Count borrows by title
 
-        // Sort the entries by borrow count in descending order and limit to top 5
+        Map<String, Long> bookBorrowCount = members.stream()
+                .flatMap(member -> member.getBorrowedBooks().stream())
+                .collect(Collectors.groupingBy(Book::getTitle, Collectors.counting()));
+
+
         List<Map.Entry<String, Long>> topFiveBooks = bookBorrowCount.entrySet().stream()
                 .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
                 .limit(5)
