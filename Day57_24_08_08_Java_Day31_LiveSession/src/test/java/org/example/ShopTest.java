@@ -1,4 +1,5 @@
 package org.example;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -33,6 +34,9 @@ class ShopTest {
         LocalDateTime kursbeginn = LocalDateTime.of(2024, Month.MAY, 21, 8, 45);
         Instant kursbeginnInstant = kursbeginn.toInstant(ZoneOffset.UTC);
 
+        LocalDateTime testKaufdatum = LocalDateTime.of(2024, Month.AUGUST, 21, 8, 45);
+        Instant testKaufdatumInstant = kursbeginn.toInstant(ZoneOffset.UTC);
+
         kazim = new Customer("Kazim", "Sakip", "k.s@gmail.com", Instant.now());
         viktor = new Customer("Viktor", "Steiner", "viktors@gmail.com", kursbeginnInstant);
         anna = new Customer("Anna", "Patschen", "annapatschen@gmail.com", Instant.now());
@@ -63,7 +67,7 @@ class ShopTest {
 
         o2.addProduct(monitor, 1);
         o2.setHasPaid(false);
-        o2.setOrderDate(Instant.now());
+        o2.setOrderDate(testKaufdatumInstant);
         shop.addOrder(o2);
 
         o3.addProduct(soundMachine, 1);
@@ -120,7 +124,7 @@ class ShopTest {
     void worstProduct() {
         assertEquals(this.perfume, shop.worstProduct());
     }
- 
+
     @Test
     void averageOrderValue() {
         assertEquals(9786.08, shop.averageOrderValue());
@@ -141,4 +145,54 @@ class ShopTest {
         assertEquals(expectedCustomers, receivedCustomers);
 
     }
+
+    @Test
+    void mostProfitableCategory() {
+        assertEquals(Category.CLOTHING, shop.mostProfitableCategory());
+    }
+
+    @Test
+    void averageOrderValueInTimeRange() {
+        LocalDateTime startDate = LocalDateTime.of(2024, Month.MAY, 1, 0, 0);
+        LocalDateTime endDate = LocalDateTime.of(2024, Month.AUGUST, 30, 23, 59);
+        Instant startDateInstant = startDate.toInstant(ZoneOffset.UTC);
+        Instant endDateInstant = endDate.toInstant(ZoneOffset.UTC);
+
+        assertEquals(9994.41, shop.averageOrderValueInTimeRange(startDateInstant, endDateInstant));
+    }
+
+    @Test
+    void totalShopValueInTimeRange() {
+        LocalDateTime startDate = LocalDateTime.of(2024, Month.MAY, 1, 0, 0);
+        LocalDateTime endDate = LocalDateTime.of(2024, Month.AUGUST, 30, 23, 59);
+        Instant startDateInstant = startDate.toInstant(ZoneOffset.UTC);
+        Instant endDateInstant = endDate.toInstant(ZoneOffset.UTC);
+
+        assertEquals(59966.47, shop.totalShopValueInTimeRange(startDateInstant, endDateInstant));
+    }
+
+    @Test
+    void returningCustomerRate() {
+        assertEquals(2.0/3.0, shop.returningCustomerRate());
+    }
+
+    @Test
+    void averageProductsPerOrder() {
+        assertEquals(2.0, shop.averageProductsPerOrder());
+    }
+
+
+    @Test
+    void mostPopularProduct() {
+        assertEquals(this.monitor, shop.mostPopularProduct());
+    }
+
+    // Durschnittliche Anzahl von Produkten pro Bestellung
+
+
+    // Umsatzstärkster Tag...
+
+
+
+
 }
