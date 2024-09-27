@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping list</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <section id="top">
+            <div>
+                <img src="./assets/img/logo.svg" alt="logo" />
+            </div>
+            <h1>Shopping list</h1>
+            <div>
+                <img id="addItemImg" src="./assets/img/ButtonAdd.svg" alt="add item">
+            </div>
+        </section>
+
+        <section id="addItem"> <!-- prov. inputbox-->
+            <div>
+                <input id="itemName" type="text" placeholder="Article name:">
+                <input id="itemQuantity" type="number" placeholder="How many?">
+            </div>
+            <div>
+                <input id="itemShop" type="text" placeholder="where want you buying?">
+                <select id="itemCategory">
+                    <option value="0">Category</option>
+                    <option value="1">Bakery Bread</option>
+                    <option value="2">Dairy</option>
+                    <option value="3">Fruit & Vegetables</option>
+                    <option value="4">Meat</option>
+                    <option value="5">Seafood</option>
+                    <option value="6">Frozen Food</option>
+                    <option value="7">Snacks</option>
+                    <option value="8">Household</option>
+                </select>
+            </div>
+            <button id="itemSend">Add Article</button>
+        </section>
+    </header>
+
+    <main>
+        <section id="UNCATEGORIZED">
+            <article>
+                <div>
+                    <img src="./assets/img/Sad.svg" alt="sad smiley" />
+                </div>
+                    <h2>Uncategorized</h2>
+                <div>
+                    <img id="UNCATEGORIZED.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('UNCATEGORIZED')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="UNCATEGORIZED.itemlist" class="keineahnung">
+
+            </section>
+        </section>
+
+        <section id="BAKERYBREAD">
+            <article>
+                <div>
+                    <img src="./assets/img/Bread.svg" alt="Bread icon" />
+                </div>
+                    <h2>Bakery & Bread</h2>
+                <div>
+                    <img id="BAKERYBREAD.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('BAKERYBREAD')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="BAKERYBREAD.itemlist">
+            </section>
+        </section>
+
+        <section id="DAIRY">
+            <article>
+                <div>
+                    <img src="./assets/img/Milk.svg" alt="Dairy Icon" />
+                </div>
+                    <h2>Dairy</h2>
+                <div>
+                    <img id="DAIRY.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('DAIRY')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="DAIRY.itemlist">
+            </section>
+        </section>
+
+        <section id="FRUITSVEGETABLES">
+            <article>
+                <div>
+                    <img src="./assets/img/Apple.svg" alt="Apple Icon" />
+                </div>
+                    <h2>Fruit & Vegetables</h2>
+                <div>
+                    <img id="FRUITSVEGETABLES.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('FRUITSVEGETABLES')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="FRUITSVEGETABLES.itemlist">
+            </section>
+        </section>
+
+
+
+        <section id="MEAT">
+            <article>
+                <div>
+                    <img src="./assets/img/Meat.svg" alt="meat icon" />
+                </div>
+                    <h2>Meat</h2>
+                <div>
+                    <img id="MEAT.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('MEAT')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="MEAT.itemlist">
+            </section>
+        </section>
+
+        <section id="SEAFOOD">
+            <article>
+                <div>
+                    <img src="./assets/img/Fish.svg" alt="fish icon" />
+                </div>
+                    <h2>Seafood</h2>
+                <div>
+                    <img id="SEAFOOD.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('SEAFOOD')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="SEAFOOD.itemlist">
+            </section>
+        </section>
+
+        <section id="FROZENFOOD">
+            <article>
+                <div>
+                    <img src="./assets/img/Frozen.svg" alt="Frozen icon" />
+                </div>
+                    <h2>Frozen Food</h2>
+                <div>
+                    <img id="FROZENFOOD.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('FROZENFOOD')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="FROZENFOOD.itemlist">
+           </section>
+        </section>
+
+        <section id="SNACKS">
+            <article>
+                <div>
+                    <img src="./assets/img/Sweets.svg" alt="snacks icon" />
+                </div>
+                    <h2>Snacks</h2>
+                <div>
+                    <img id="SNACKS.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('SNACKS')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="SNACKS.itemlist">
+            </section>
+        </section>
+
+        <section id="HOUSEHOLD">
+            <article>
+                <div>
+                    <img src="./assets/img/chemicals.svg" alt="household icon" />
+                </div>
+                    <h2>Household</h2>
+                <div>
+                    <img id="HOUSEHOLD.groupingImg" src="./assets/img/GroupClose.svg" onclick="groupingToggle('HOUSEHOLD')" alt="Group closing" />
+                </div>
+            </article>
+            <section id="HOUSEHOLD.itemlist">
+            </section>
+        </section>
+
+    </main>
+
+    <footer>
+        <section id="addItem"> <!-- prov. inputbox-->
+            <div>
+            <input id="itemName" type="text" placeholder="Article name:">
+            <input id="itemQuantity" type="number" placeholder="How many?">
+            </div>
+            <div>
+            <input id="itemShop" type="text" placeholder="where want you buying?">
+            <select id="itemCategory">
+                <option value="0">Category</option>
+                <option value="1">Bakery Bread</option>
+                <option value="2">Dairy</option>
+                <option value="3">Fruit & Vegetables</option>
+                <option value="4">Meat</option>
+                <option value="5">Seafood</option>
+                <option value="6">Frozen Food</option>
+                <option value="7">Snacks</option>
+                <option value="8">Household</option>
+            </select>
+            </div>
+            
+            <button id="itemSend">Add Article</button>
+
+        </section>
+    </footer>
+</body>
+</html>

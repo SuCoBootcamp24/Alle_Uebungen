@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "CourierPrime";
+  src: url(../fonts/CourierPrime-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "LeckerliOne";
+  src: url(../fonts/LeckerliOne-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+html {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  height: 200px;
+  background: #36b5b0;
+}
+
+header h1 {
+  height: 80px;
+  width: 320px;
+  padding: 10px;
+
+  font-family: "LeckerliOne";
+  font-size: 6.4rem;
+  font-weight: 100;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  rotate: -10deg;
+
+  transition: transform 2s;
+}
+
+header h1:hover {
+  height: 80px;
+  width: 320px;
+  transform: rotate(20deg);
+}
+
+main {
+  margin-top: 50px;
+}
+
+.image,
+.content {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  display: flex;
+  height: 450px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 97%;
+  width: 97%;
+  border: 10px solid white;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  box-shadow: 2px 2px 8px black;
+  transition: width 0.5s, height 0.5s;
+}
+
+.image img:hover {
+  height: 100%;
+  width: 100%;
+
+  transition: width 0.5s, height 0.5s;
+}
+
+.content {
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+.content h2 {
+  font-size: 2.4rem;
+}
+
+.content p {
+  margin: 15px 20px 15px 0;
+  font-size: 1.6rem;
+}
+
+.content a {
+  margin-top: 15px;
+  font-size: 1.6rem;
+  color: #9dd8c8;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: rgb(242, 177, 201);
+}
+
+.inputBoxBorder {
+  width: 95%;
+  margin: 15px auto 0 auto;
+}
+
+.inputBoxBorder input {
+  border: none;
+  background: transparent;
+  height: 250px;
+  width: 100%;
+  padding: 0 0 40px 12%;
+  font-family: "CourierPrime";
+  font-size: 3rem;
+}
+
+.inputBox {
+  height: 200px;
+  width: 95%;
+
+  background: #fcf5b0;
+  border-radius: 50px;
+  margin-top: -235px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.keyfield {
+  display: flex;
+
+  height: 70%;
+  width: 90%;
+  margin: 40px auto;
+
+  border-bottom: 5px solid #ff0000;
+}
+
+.keyfield h3 {
+  height: 65px;
+  width: 45px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 2px;
+
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.keyfield article {
+  display: flex;
+  width: 95%;
+}
+
+footer {
+  margin: 80px 0 0 0;
+  background: #36b5b0;
+  text-align: center;
+
+  padding: 50px 0 10px 0;
+}
+
+footer p,
+footer a {
+  font-size: 1.6rem;
+}
+
+footer p {
+  margin-bottom: 20px;
+}
+
+footer a {
+  text-decoration: none;
+}

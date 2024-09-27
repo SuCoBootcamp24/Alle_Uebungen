@@ -1,0 +1,13 @@
+services:
+  quizdb:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=quiz
+      - POSTGRES_DB=quizzidb
+    ports:
+      - 5432:5432
+  adminer:
+    image: adminer
+    ports:
+      - 7070:8080

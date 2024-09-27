@@ -1,0 +1,28 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ToDoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <envs>
+      <env name="DB_PASSWORD" value="Test1234" />
+      <env name="DB_ROOT_PASSWORD" value="RE6430ne284B!" />
+      <env name="DB_USERNAME" value="TestSuperCode" />
+      <env name="FRONTEND_HOST" value="localhost" />
+      <env name="FRONTEND_PORT" value="3000" />
+      <env name="MYSQL_DATABASE" value="supercode" />
+      <env name="MYSQL_HOST" value="localhost" />
+    </envs>
+    <module name="ToDo" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="de.supercode.todo.ToDoApplication" />
+    <extension name="net.ashald.envfile">
+      <option name="IS_ENABLED" value="false" />
+      <option name="IS_SUBST" value="false" />
+      <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+      <option name="IS_IGNORE_MISSING_FILES" value="false" />
+      <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+      <ENTRIES>
+        <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+      </ENTRIES>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

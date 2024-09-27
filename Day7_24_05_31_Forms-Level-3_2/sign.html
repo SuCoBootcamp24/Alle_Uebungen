@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <a class="activeBtn" href="#">Sign Up</a>
+
+        <a href="index.html">Login</a>
+      </article>
+
+      <form action="">
+        <h2>Sign up for Free</h2>
+
+        <div>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            required
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            required
+            placeholder="Last Name"
+          />
+        </div>
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Email"
+        />
+
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Password"
+          pattern=".{8,}"
+        />
+
+        <input
+          type="password"
+          name="password"
+          id="confirm_Password"
+          required
+          placeholder="Confirm Password"
+          pattern=".{8,}"
+        />
+
+        <input
+          class="submitBtn"
+          type="submit"
+          id="submit"
+          value="GET STARTED"
+        />
+      </form>
+    </main>
+  </body>
+</html>

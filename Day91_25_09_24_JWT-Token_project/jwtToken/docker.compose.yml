@@ -1,0 +1,9 @@
+services:
+  securitydb:
+    image: postgres
+    environment:
+      - POSTGRES_DB=securitydb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secret
+    ports:
+      - 5431:5432

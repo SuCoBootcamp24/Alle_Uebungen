@@ -1,0 +1,22 @@
+img:nth-last-of-type(1) {
+  height: 400px;
+  width: 400px;
+}
+img:nth-last-of-type(2) {
+  height: 50%;
+  width: 50%;
+}
+img:nth-last-of-type(3) {
+  height: 20em;
+  width: 20em;
+}
+img:nth-last-of-type(4) {
+  height: 40rem;
+  width: 40rem;
+}
+img:nth-last-of-type(5) {
+  width: 35vw;
+}
+img:nth-last-of-type(6) {
+  height: 75vh;
+}

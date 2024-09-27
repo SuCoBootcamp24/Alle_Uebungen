@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background: url("../img/photo-1460602594182-8568137446ce.jpeg");
+  background-size: 10%;
+}
+
+article {
+  padding: 10px 10px;
+  background: url("../img/photo-1603398749947-87246022fbf9.jpeg") no-repeat;
+  background-size: 10%;
+  background-position: right;
+}
+
+article p {
+  margin-bottom: 20px;
+}
+
+article ul {
+  margin: 0 0 10px 30px;
+}

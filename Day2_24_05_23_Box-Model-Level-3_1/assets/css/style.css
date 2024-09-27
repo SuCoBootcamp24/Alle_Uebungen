@@ -1,0 +1,132 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+  font-family: FrederickatheGreat;
+  src: url("../fonts/FrederickatheGreat-Regular.ttf");
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: OpenSans, FrederickatheGreat, Impact, Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
+}
+
+button {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 15px 35px;
+  color: white;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background: url("../img/9335a168c29f9ac8c52676c2bda32a72.jpeg") no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+header h1 {
+  width: 300px;
+  font-family: FrederickatheGreat;
+  font-size: 3rem;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+header section {
+  width: 350px;
+  margin-top: 30%;
+  margin-left: 40%;
+  margin-right: 40%;
+  text-align: center;
+  font-size: 1rem;
+}
+header article {
+  margin: 25px;
+}
+
+header h2 {
+  font-family: FrederickatheGreat;
+  font-size: 2rem;
+}
+
+header nav {
+  margin-top: 20%;
+  margin-right: 8%;
+  text-align: right;
+}
+
+header nav li {
+  margin-top: 25px;
+  list-style-type: none;
+}
+
+header nav a:link {
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 550px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  text-align: center;
+}
+
+main h2 {
+  font-family: FrederickatheGreat;
+  font-size: 2rem;
+}
+
+main section p {
+  margin-top: 40px;
+}
+
+main article {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 150px;
+  border: 4px solid black;
+  font-weight: 700;
+}
+
+main article p:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 25px;
+  padding: 30px 0;
+  background-color: #3a3b4a;
+}
+
+footer p {
+  width: 50%;
+  color: white;
+}
+
+footer button {
+  margin-top: 20px;
+}

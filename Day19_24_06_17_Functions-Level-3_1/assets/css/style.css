@@ -1,0 +1,66 @@
+/** ---- BASIC ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+a {
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  margin: 5%;
+
+  text-align: center;
+  font-size: 4rem;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+article div {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+article div:hover {
+  box-shadow: 0 10px 20px gray;
+}
+
+#ball1 {
+  background: linear-gradient(45deg, green 50%, purple 50%);
+}
+
+#ball2 {
+  background: linear-gradient(
+    45deg,
+    rgb(0, 99, 164) 50%,
+    rgb(238, 201, 12) 50%
+  );
+}
+
+#ball3 {
+  background: linear-gradient(45deg, rgb(15, 2, 59) 50%, rgb(226, 117, 0) 50%);
+}
+
+#ball4 {
+  background: linear-gradient(45deg, rgb(0, 11, 171) 50%, rgb(0, 208, 255) 50%);
+}

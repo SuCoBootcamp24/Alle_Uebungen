@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+html {
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  padding: 0 6%;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 20px;
+}
+
+.wrapper:nth-of-type(2) {
+  border: none;
+}
+
+/* heaader */
+
+header {
+  margin-top: 20px;
+}
+header nav {
+  margin-bottom: 140px;
+}
+
+header nav a {
+  padding: 2px 5px 2px 0;
+  font-size: 1.5rem;
+  color: #659d89;
+}
+
+header nav a:hover {
+  color: #517d6e;
+}
+
+header section {
+  max-width: 650px;
+}
+
+header section h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  color: #659d89;
+}
+
+header section p {
+  font-size: 5rem;
+}
+
+header article {
+  width: 30px;
+  margin: 0 0 80px 95%;
+  text-align: center;
+}
+
+header article a {
+  display: inline-block;
+  padding: 2px 2px;
+}
+
+header article img:hover {
+  filter: drop-shadow(0px 0px 3px #ccc);
+}
+
+header div {
+  margin-bottom: 130px;
+}
+
+header div a {
+  font-size: 1.6rem;
+  color: #666666;
+}
+
+header div a:hover {
+  color: black;
+}
+
+/* Main Smileys */
+
+.smileyFrame h3 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+
+.smileyFrame p {
+  font-size: 1.6rem;
+  font-size: 100;
+}
+
+.smileyFrame section {
+  width: 100%;
+  padding: 4%;
+  margin-bottom: 130px;
+}
+
+.smileyFrame section img {
+  width: 28%;
+  margin: 2%;
+}
+
+.smileyFrame section img:hover {
+  box-shadow: 0px 0px 10px #3e3d3d;
+}
+
+/* main context*/
+
+.contentFrame h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.contentFrame section {
+  width: 100%;
+  padding: 6%;
+}
+
+.contentFrame section article {
+  width: 70%;
+  max-width: 650px;
+}
+
+.contentFrame section article img:hover {
+  box-shadow: 0px 0px 10px #3e3d3d;
+}
+
+.contentFrame section article div {
+  width: 90%;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.contentFrame section article div p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #666666;
+}
+
+.contentFrame section article div h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 15px 0;
+}
+
+.c-left {
+  margin: 0 30% 130px 0;
+}
+
+.c-right {
+  margin: 0 0 130px 30%;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  padding-top: 80px;
+  border-top: 1px dotted #ccc;
+  color: #666;
+  text-align: center;
+}
+
+footer a {
+  font-size: 2rem;
+  font-weight: 100;
+  color: #666;
+}
+
+footer a::before {
+  content: "⬆️";
+  margin-right: 3px;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+footer p {
+  margin: 80px auto 35px auto;
+}

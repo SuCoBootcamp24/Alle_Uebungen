@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 15px 10px;
+  border: 2px solid #ffcc00;
+  font-size: 1rem;
+}
+
+h2::before {
+  background: #ffcc00;
+  content: "Info";
+}
+
+h2::after {
+  content: "\2665";
+  color: #ffcc00;
+}
+
+h2::selection {
+  background: #ffcc00;
+}

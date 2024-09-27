@@ -1,0 +1,509 @@
+@font-face {
+    font-family: "Caveat";
+    src: url("../fonts/Caveat-VariableFont_wght.ttf");
+  }
+  
+  @font-face {
+    font-family: "Marker";
+    src: url("../fonts/PermanentMarker-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Simonetta";
+    src: url("../fonts/Simonetta-Black.ttf");
+  }
+
+  /** ---- BASIC ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    min-width: 650px;
+    background-color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 10px;
+  }
+  
+  a {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-family: "Simonetta";
+    font-size: 4rem;
+    color: rgb(50, 50, 50);
+  }
+
+  h2 {
+    font-family: "Marker", sans-serif;
+    font-size: 5rem;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  p {
+    font-family: sans-serif;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+/** -------- HEADER mobile -------- **/
+header {
+  z-index: 4;
+  background-color: whitesmoke;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+#top {
+  z-index: 4;
+  background-color: whitesmoke;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  height: 250px;
+  width: 100%;
+
+  padding: 30px 20px 0 20px;
+}
+
+header div {
+  height: 200px;
+  width: 200px;
+}
+
+header div:nth-of-type(2){
+  height: 150px;
+  width: 150px;
+}
+
+
+
+header div img {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+#addItem {
+  z-index: 3;
+  background-color: whitesmoke;
+  position: fixed;
+  top: -100%;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+ 
+  border-bottom: 5px solid gray;
+  border-radius: 0 0 50px 50px;
+  
+  height: 400px;
+  width: 100%;
+  padding: 25px 0;
+
+  flex-direction: column;
+  transition: top 0.5s ease-in-out;
+ }
+
+ #addItem.active {
+  position: absolute;
+  top: 250px; 
+}
+
+.overlay {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/* Overlay sichtbar */
+.overlay.active {
+  z-index: 2;
+  display: block;
+}
+
+
+
+
+
+
+#addItem div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  height: 100px;
+  width: 100%;
+  
+}
+
+#addItem div input, #addItem div select {
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  
+  height: 80px;
+  width: 50%;
+
+  font-size: 2.5rem;
+  color: rgba(75, 75, 75, 0.393);
+  text-align: center;
+
+}
+
+#itemSend {
+  align-self: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  
+  height: 80px;
+  width: 150px;
+
+  font-size: 2.5rem;
+  color: rgba(75, 75, 75, 0.393);
+  text-align: center;
+ }
+
+.slide {
+
+}
+
+
+
+/** ------ MAIN mobile --- **/
+
+main {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  padding: 20px;
+}
+
+main > section {
+  border: 1px solid;
+  border-radius: 40px;
+  box-shadow: 3px 3px 10px gray;
+
+  margin-bottom: 50px;
+  width: 100%;
+
+}
+
+main > section > article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+
+  height: 100px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+main > section > article div {
+  height: 80px;
+  width: 80px;
+}
+
+main > section > article div img {
+  height: 100%;
+  width: 100%;
+}
+
+main > section section {
+  width: 100%;
+  padding: 10px 20px 10px 40px;
+}
+
+.articleBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.articleText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.articleText p:nth-of-type(1) {
+  font-family: "Caveat", sans-serif;
+  font-size: 5rem;
+  margin-right: 50px;
+ }
+
+.pcs, .shops{
+  background-color: rgba(128, 128, 128, 0.515);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.shops {
+  background-color: rgba(159, 101, 101, 0.542);
+}
+
+.articleImg {
+  height: 60px;
+  width: 60px;
+}
+
+.articleImg img {
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/** category color **/
+
+#UNCATEGORIZED {
+  border-color: #636365;
+}
+
+#UNCATEGORIZED h2 {
+  color: #636365;
+}
+
+
+#BAKERYBREAD {
+  border-color: #FF9500;
+}
+
+#BAKERYBREAD h2 {
+  color: #FF9500;
+}
+
+
+#DAIRY {
+  border-color: #007AFF;
+}
+
+#DAIRY h2 {
+  color: #007AFF;
+}
+
+
+#FRUITSVEGETABLES {
+  border-color: #34C759;
+}
+
+#FRUITSVEGETABLES h2 {
+  color: #34C759;
+}
+
+
+#MEAT {
+  border-color: #FF3B30;
+}
+#MEAT h2 {
+  color: #FF3B30;
+}
+
+
+#SEAFOOD {
+  border-color: #5AC8FA;
+}
+
+#SEAFOOD h2 {
+  color: #5AC8FA;
+}
+
+
+#FROZENFOOD {
+  border-color: #5392B6;
+}
+
+#FROZENFOOD h2 {
+  color: #5392B6;
+}
+
+
+#SNACKS {
+  border-color: #FF2D55;
+}
+
+#SNACKS h2 {
+  color: #FF2D55;
+}
+
+
+#HOUSEHOLD {
+  border-color: #AF52DE;
+}
+
+#HOUSEHOLD h2 {
+  color: #AF52DE;
+}
+
+
+
+.isBought {
+  position: relative;
+}
+
+.isBought::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Dicke der Linie */
+  background-color: black; /* Farbe der Linie */
+  transform: translateY(-50%);
+}
+
+/** ------- footer mobile ------ **/
+
+footer {
+  margin-bottom: 50px;
+
+  width: 100%;
+
+  padding: 30px;
+}
+
+
+ /** ----- tablet ---- **/
+
+ @media only screen and (min-width: 768px) {
+
+ h1 {
+  font-size: 6rem;
+ }
+
+ h2 {
+  font-size: 3.25rem;
+ }
+
+ p {
+  font-size: 1.5rem;
+ }
+
+ .articleText p:nth-of-type(1) {
+  font-size: 3rem;
+ }
+
+ main > section > article div:nth-of-type(1) {
+  height: 50px;
+  width: 50px;
+}
+
+ main > section > article div:nth-of-type(2) {
+  height: 30px;
+  width: 30px;
+}
+
+.articleImg {
+  height: 30px;
+  width: 30px;
+}
+
+  main {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 10px 20px; 
+    grid-template-areas: 
+      "UNCATEGORIZED BAKERYBREAD"
+      "DAIRY FRUITSVEGETABLES"
+      "MEAT SEAFOOD"
+      "FROZENFOOD SNACKS"
+      "HOUSEHOLD HOUSEHOLD"; 
+  }
+
+  #UNCATEGORIZED {
+    grid-area: UNCATEGORIZED;
+    height: fit-content;
+  }
+
+  #BAKERYBREAD {
+    grid-area: BAKERYBREAD;
+    height: fit-content;
+  }
+
+  #DAIRY {
+    grid-area: DAIRY;
+    height: fit-content;
+  }
+
+  #FRUITSVEGETABLES {
+    grid-area: FRUITSVEGETABLES;
+    height: fit-content;
+  }
+
+  #MEAT {
+    grid-area: MEAT;
+    height: fit-content;
+  }
+
+  #SEAFOOD {
+    grid-area: SEAFOOD;
+    height: fit-content;
+  }
+
+  #FROZENFOOD {
+    grid-area: FROZENFOOD;
+    height: fit-content;
+  }
+
+  #SNACKS {
+    grid-area: SNACKS;
+    height: fit-content;
+  }
+
+  #HOUSEHOLD {
+    grid-area: HOUSEHOLD;
+    height: fit-content;
+  }
+
+}
+
+/** ----- Desktop ---- **/
+
+
+@media only screen and (min-width: 992px) {
+
+  header, main {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+
+}

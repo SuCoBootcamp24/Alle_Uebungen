@@ -1,0 +1,124 @@
+DROP TABLE IF EXISTS GartenPflanzen;
+DROP TABLE IF EXISTS Garten;
+DROP TABLE IF EXISTS Pflanze;
+
+
+CREATE TABLE Garten (
+    GartenID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Size INT
+);
+
+CREATE TABLE Pflanze (
+    PflanzenID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Essbar BOOLEAN,
+    WasserbedarfProPflanze INT
+);
+
+CREATE TABLE GartenPflanzen (
+    GartenID INT,
+    PflanzenID INT,
+    Anzahl INT,
+    FOREIGN KEY (GartenID) REFERENCES Garten(GartenID),
+    FOREIGN KEY (PflanzenID) REFERENCES Pflanze(PflanzenID)
+);
+
+INSERT INTO Garten (GartenID, Name, Size)
+VALUES
+(1, 'Blumenparadies', 500),
+(2, 'GemüseObstGarten', 300),
+(3, 'Kräutergarten', 150);
+
+
+INSERT INTO Pflanze (PflanzenID, Name, Essbar, WasserbedarfProPflanze)
+VALUES
+(1, 'Rose', FALSE, 2),
+(2, 'Tomate', TRUE, 3),
+(3, 'Basilikum', TRUE, 1),
+(4, 'Sonnenblume', FALSE, 5),
+(5, 'Karotte', TRUE, 2),
+(6, 'Apfelbaum', TRUE, 10),
+(7, 'Lavendel', FALSE, 1),
+(8, 'Erdbeere', TRUE, 2),
+(9, 'Kartoffel', TRUE, 4),
+(10, 'Kürbis', TRUE, 3),
+(11, 'Dill', TRUE, 1);
+
+
+INSERT INTO GartenPflanzen (GartenID, PflanzenID, Anzahl)
+VALUES
+(1, 1, 50),    -- 50 Rosen im Blumenparadies
+(1, 4, 20),    -- 20 Sonnenblumen im Blumenparadies
+(1, 7, 100),   -- 100 Lavendelpflanzen im Blumenparadies
+
+(2, 2,  30),    -- 30 Tomaten
+(2, 5,  40),    -- 40 Karotten
+(2, 9,  20),    -- 20 Karoffelpflanzen
+(2, 10, 10),    -- 10 Kürbispflanzen
+(2, 6,  5),     -- 5 Apfelbäume
+(2, 8,  25),    -- 25 Erdbeerpflanzen
+
+(3, 3, 100),   -- 100 Basilikumpflanzen
+(3, 2, 15),    -- 15 Tomaten
+(3, 7, 50),    -- 50 Lavendelpflanzen
+(3, 11, 100);  -- 100 Dill
+
+
+-- ------- --
+
+/*Berechne die gesamte Anzahl von Pflanzen in jedem Garten*/
+SELECT NAME AS GARTEN_NAME, (SELECT SUM(ANZAHL)
+              FROM GARTENPFLANZEN
+              WHERE GARTEN.GARTENID = GARTENPFLANZEN.GARTENID
+              ) AS PFLANZEN_ANZAHL
+FROM GARTEN;
+
+/*Finde die Namen der Pflanzen und die Anzahl der Pflanzen im „Blumenparadies“*/
+
+SELECT
+    g.NAME AS GARTEN_NAME,
+
+    (SELECT p.NAME
+     FROM PFLANZE p
+     WHERE p.PFLANZENID = gp.PFLANZENID) AS PFLANZEN_NAME,
+
+    gp.ANZAHL AS ANZAHL
+
+FROM GARTENPFLANZEN gp
+INNER JOIN GARTEN g ON gp.GARTENID = g.GARTENID
+WHERE g.NAME = 'Blumenparadies';
+
+-- ODER
+SELECT
+    g.NAME AS GARTEN_NAME,
+    p.NAME AS PFLANZEN_NAME,
+    gp.ANZAHL AS ANZAHL
+FROM GARTENPFLANZEN gp
+INNER JOIN GARTEN g ON gp.GARTENID = g.GARTENID
+INNER JOIN PFLANZE p ON gp.PFLANZENID = p.PFLANZENID
+WHERE g.NAME = 'Blumenparadies';
+
+/* Liste Gärten mit weniger als 200 Pflanzen auf*/
+SELECT
+    g.NAME AS GARTEN_NAME,
+    SUM(gp.ANZAHL) AS PFLANZEN_ANZAHL
+FROM
+    GARTEN g
+LEFT JOIN
+    GARTENPFLANZEN gp ON g.GARTENID = gp.GARTENID
+GROUP BY
+    g.NAME
+HAVING
+    SUM(gp.ANZAHL) < 200;
+
+/*Finde den Namen der Pflanze und den Wasserbedarf für alle essbaren Pflanzen im „Kräutergarten“*/
+SELECT
+    p.NAME AS PFLANZEN_NAME,
+    SUM(p.WASSERBEDARFPROPFLANZE * gp.ANZAHL) AS WASSERBEDARF_IN_L
+FROM GARTENPFLANZEN gp
+INNER JOIN GARTEN g ON gp.GARTENID = g.GARTENID
+INNER JOIN PFLANZE p ON gp.PFLANZENID = p.PFLANZENID
+WHERE g.NAME = 'Kräutergarten'
+AND p.ESSBAR = TRUE
+GROUP BY p.NAME;
