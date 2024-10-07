@@ -1,0 +1,48 @@
+@use "../../App.scss" as styles;
+
+#formular {
+    @include styles.cards;
+
+    width: 500px;
+
+    label {
+        align-self: flex-start;
+        margin: 0 0 -5px 0;
+    }
+
+    input {
+        border: 1px solid rgb(183, 181, 181);
+        border-radius: 8px;
+        box-shadow: 1px 1px 5px gray inset;
+
+        height: 40px;
+        width: 100%;
+
+        font-size: 2.5rem;
+
+    }
+    button {
+        width: 100%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+
+        h3 {
+            font-size: 3rem;
+            color: rgb(64, 64, 249);
+            text-align: start;
+        }
+
+        p {
+            margin: 5px;
+            &:nth-of-type(even) {
+                margin-bottom: 20px;
+            }
+        }
+}
+
+}

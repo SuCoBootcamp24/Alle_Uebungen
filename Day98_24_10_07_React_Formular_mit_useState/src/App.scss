@@ -11,6 +11,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
 
   padding: 50px;
 }
@@ -20,3 +21,41 @@ main {
 h1 {
   font-size: 4rem;
 }
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+@mixin cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 25px;
+    box-shadow: 1px 5px 10px gray;;
+
+    background-color: white;
+
+    width: 250px;
+    padding: 30px;
+    font-size: 2rem;
+
+    button {
+        background-color: rgb(3, 168, 3);
+        border: 1px solid blue;
+        border-radius: 25px;
+
+        margin-top: 30px;
+        padding: 20px 60px;
+
+        font-size: 2.5rem;
+        color: whitesmoke;
+
+        
+    }
+  }

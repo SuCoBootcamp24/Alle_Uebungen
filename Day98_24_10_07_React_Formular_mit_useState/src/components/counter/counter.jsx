@@ -4,7 +4,7 @@ export default function Counter() {
     const [count, setCount] = useState(0);
 
     return (
-        <article id="counterCard">
+        <article id="counter">
             <h2>
                 Count:
             </h2>

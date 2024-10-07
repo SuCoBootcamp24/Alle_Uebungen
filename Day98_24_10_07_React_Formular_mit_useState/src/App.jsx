@@ -1,13 +1,10 @@
-import { useState } from 'react'
 import './App.scss'
 import Counter from './components/counter/counter'
+import Formular from './components/formular/formular'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return <main>
     <Counter />
+    <Formular />
   </main>
-}
-
-export default App
+};
