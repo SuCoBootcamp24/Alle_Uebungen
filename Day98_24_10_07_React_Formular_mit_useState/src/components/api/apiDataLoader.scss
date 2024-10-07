@@ -1,0 +1,5 @@
+@use "../../App.scss" as styles;
+
+#apiLoader {
+    @include styles.cards;
+}
