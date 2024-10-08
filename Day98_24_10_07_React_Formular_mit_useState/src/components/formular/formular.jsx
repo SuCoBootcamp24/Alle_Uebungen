@@ -28,10 +28,10 @@ export default function Formular() {
                 Formular mit useState
             </h2>
             
-            <label htmlFor="nameInput">Name: {err ? <span>    Muss ausgefüllt sein!</span> : ""} </label>
+            <label htmlFor="nameInput">Name: {err ? <span> Muss ausgefüllt sein!</span> : ""} </label>
             <input onChange={(event) => setName(event.target.value)} type="text" id="nameInput"/>
 
-            <label htmlFor="ageInput">Alter: {err ? <span>    Muss ausgefüllt sein!</span> : ""} </label>
+            <label htmlFor="ageInput">Alter: {err ? <span> Muss ausgefüllt sein!</span> : ""} </label>
             <input onChange={(event) => setAge(event.target.value)} type="text" id="ageInput"/>
 
             <button onClick={() => {
