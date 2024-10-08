@@ -7,6 +7,7 @@ export default function Formular() {
     const [person, setPerson] = useState([])
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
+    const [toggle, setToggle] = useState(false)
 
     function add() {
         const p = {
@@ -14,7 +15,6 @@ export default function Formular() {
             age
         };
         setPerson(old => [...old, p]);
-
         document.getElementById("nameInput").value="";
         document.getElementById("ageInput").value="";
     };
@@ -31,15 +31,26 @@ export default function Formular() {
             <label htmlFor="ageInput">Alter:</label>
             <input onChange={(event) => setAge(event.target.value)} type="text" id="ageInput"/>
 
-            <button onClick={() => add()}>
+            <button onClick={() => {
+                add()
+                setToggle(true)
+            }}>
                 Submit
             </button>
 
             <div>
-            <h3>
-            Übermittelte Daten:
-            </h3>
-            {person.map(element => <Person name={element.name} age={element.age} />)}
+
+                {toggle ?
+                <>
+                    <h3>
+                    Übermittelte Daten:
+                    </h3>
+                    {person.map(element => <Person name={element.name} age={element.age} />)}
+                </>
+                :
+                <></>
+                }
+           
             </div>
 
         </article>
