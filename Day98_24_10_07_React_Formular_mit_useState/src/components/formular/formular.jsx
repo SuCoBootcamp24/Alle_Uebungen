@@ -7,7 +7,8 @@ export default function Formular() {
     const [person, setPerson] = useState([])
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+    const [err, setErr] = useState(false);
 
     function add() {
         const p = {
@@ -17,6 +18,8 @@ export default function Formular() {
         setPerson(old => [...old, p]);
         document.getElementById("nameInput").value="";
         document.getElementById("ageInput").value="";
+        setName("");
+        setAge("");
     };
 
     return (
@@ -25,15 +28,20 @@ export default function Formular() {
                 Formular mit useState
             </h2>
             
-            <label htmlFor="nameInput">Name:</label>
+            <label htmlFor="nameInput">Name: {err ? <span>    Muss ausgefüllt sein!</span> : ""} </label>
             <input onChange={(event) => setName(event.target.value)} type="text" id="nameInput"/>
 
-            <label htmlFor="ageInput">Alter:</label>
+            <label htmlFor="ageInput">Alter: {err ? <span>    Muss ausgefüllt sein!</span> : ""} </label>
             <input onChange={(event) => setAge(event.target.value)} type="text" id="ageInput"/>
 
             <button onClick={() => {
+                if (name !="" && age != "") {
                 add()
                 setToggle(true)
+                setErr(false);
+                } else {
+                    setErr(true);
+                }
             }}>
                 Submit
             </button>
